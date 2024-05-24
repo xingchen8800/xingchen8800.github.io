@@ -1,5 +1,7 @@
 ---
 title: 分类
 date: 2024-05-19 21:50:22
-type: "categories"
+# type: tags
+layout: "categories"
+comments: false
 ---
