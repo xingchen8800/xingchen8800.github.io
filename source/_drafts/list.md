@@ -1,0 +1,264 @@
+---
+title: list
+tags:
+categories:
+- 《算法竞赛》
+- [数据结构,链表]
+---
+
+# T1. [约瑟夫问题](https://www.luogu.com.cn/problem/P1996)
+
+## 题目描述
+
+$n$ 个人围成一圈，从第一个人开始报数,数到 $m$ 的人出列，再由下一个人重新从 $1$ 开始报数，数到 $m$ 的人再出圈，依次类推，直到所有的人都出圈，请输出依次出圈人的编号。
+
+**注意：本题和《深入浅出-基础篇》上例题的表述稍有不同。书上表述是给出淘汰 $n-1$ 名小朋友，而该题是全部出圈。**
+
+## 输入格式
+
+输入两个整数 $n,m$。
+
+## 输出格式
+
+输出一行 $n$ 个整数，按顺序输出每个出圈人的编号。
+
+## 样例 #1
+
+### 样例输入 #1
+
+```
+10 3
+```
+
+### 样例输出 #1
+
+```
+3 6 9 2 7 1 8 5 10 4
+```
+
+## 提示
+
+$1 \le m, n \le 100$
+
+## 题解
+用 __链表__ 模拟一个圈，每数m个数就输出一次，然后删除那个节点即可.
+
+### 代码A-动态链表
+```c++
+#include <iostream>
+using namespace std;
+
+struct Node {   //定义节点结构体
+    int data;   //数据（本题存储编号）
+    Node *nxt;  //下一个元素（本题不需要向前遍历）
+};
+
+int n, m;
+Node *head; //链表的头（最后一个节点）
+Node *p;    //临时节点，给链表添加数据时使用
+Node *now;  //当前节点，数数时使用
+Node *prev; //当前节点的上一个节点，删除节点时使用
+
+int main() {
+    //输入
+    cin >> n >> m;
+    //初始化（建立链表）
+    head = new Node;    //为头申请空间
+    head->data = 1;     //头的编号是1
+    head->nxt = nullptr;//暂时没有下一位
+    now = head;         //从头开始
+    //添加节点
+    for(int i = 2; i <= n; i++) {
+        p = new Node;   //临时节点申请空间
+        now->nxt = p;   //临时节点进入链表
+        now = p;        //更新当前节点
+    }
+    now->nxt = head;    //链表成环
+    //数数(solution)
+    now = head, prev = head;    //从头开始数
+    while((n--) > 1) {  //链表不空就循环
+        for(int i = 1; i < m; i++) {    //从1数到m - 1
+            prev = now;     //更新上一位
+            now = now->nxt; //更新当前位为下一位
+        }
+        cout << now->data << " " << endl;
+        prev->nxt = now->nxt;   //将上个节点的下一位更新为当前节点的下一位(删除当前节点)
+        delete now; //释放内存
+        now = prev->nxt;    //从下一个继续
+    }
+    cout << now->data << " ";   //最后一个没有输出完
+    delete now; //释放内存(太标准了)
+    return 0;
+}
+```
+
+### 代码B-静态链表
+```c++
+#include <iostream>
+using namespace std;
+
+struct Node{
+    int id, nxt_id;
+} nodes[101];
+
+int n, m;
+
+int main() {
+    //输入
+    cin >> n >> m;
+    //初始化
+    nodes[0].nxt_id = 1;    //第一个节点的值为1
+    for(int i = 1; i <= n; i++) {
+        nodes[i].id = i;            //第i个节点的值为i
+        nodes[i].nxt_id = i + 1;    
+    }
+    nodes[n].nxt_id = 1;    //成环
+    //数数
+    int now = 1, prev = 1;
+    while((n--) > 1) {
+        for(int i = 1; i < m; i++) {
+            prev = now;
+            now = nodes[now].nxt_id;
+        }
+        cout << nodes[now].id << " ";
+        nodes[prev].nxt_id = nodes[now].nxt_id;
+        now = nodes[prev].nxt_id;
+    }
+    cout << nodes[now].id << " ";
+    return 0;
+}
+```
+
+### 代码C-双向链表
+```c++
+#include <iostream>
+using namespace std;
+
+struct Node{
+    int id, nxt_id, pre_id;
+} nodes[101];
+
+int n, m;
+
+int main() {
+    //输入
+    cin >> n >> m;
+    //初始化
+    nodes[0].nxt_id = 1;    //第一个节点的值为1
+    for(int i = 1; i <= n; i++) {
+        nodes[i].id = i;            //第i个节点的值为i
+        nodes[i].nxt_id = i + 1;
+        nodes[i].pre_id = i - 1;    
+    }
+    nodes[n].nxt_id = 1;
+    nodes[1].pre_id = n;    //成环
+    //数数
+    int now = 1;
+    while((n--) > 1) {
+        for(int i = 1; i < m; i++) {
+            now = nodes[now].nxt_id;
+        }
+        cout << nodes[now].id << " ";
+        int prev = nodes[now].pre_id;               //记录上一位
+        int next = nodes[now].nxt_id;               //记录下一位
+        nodes[prev].nxt_id = nodes[now].nxt_id;     
+        nodes[next].pre_id = nodes[now].pre_id;     //删除now
+        now = next;                                 //更新now
+    }
+    cout << nodes[now].id << " ";
+    return 0;
+}
+```
+
+### 代码D-一维数组代替链表
+```c++
+#include <iostream>
+using namespace std;
+
+int nodes[101];
+int n, m;
+
+int main() {
+    //输入
+    cin >> n >> m;
+    //初始化
+    for(int i = 1; i <= n - 1; i++)
+        nodes[i] = i + 1;       //nodes[i]就是下个节点
+    nodes[n] = 1;    //成环
+    //数数
+    int now = 1, prev = 1;
+    while((n--) > 1) {
+        for(int i = 1; i < m; i++) {
+            prev = now;
+            now = nodes[now];
+        }
+        cout << now << " ";
+        nodes[prev] = nodes[now];
+        now = nodes[prev];
+    }
+    cout << now << " ";
+    return 0;
+}
+```
+
+### 代码E-STL list
+```c++
+#include <iostream>
+#include <list>
+using namespace std;
+
+int n, m;
+list<int> nodes;
+
+int main() {
+    //输入
+    cin >> n >> m;
+    //初始化
+    for(int i = 1; i <= n; i++)
+        node.push_back(i);
+    //数数
+    list<int>::iterator it = node.begin();  //迭代器
+    while(node.size > 1) {  //链表有数
+        for(int i = 1; i <= m; i++) {
+            it++;
+            if(it == node.end()) it = node.begin(); //手动成环
+        }
+        cout << *it << " "; //*it就是it的值
+        //删除it
+        auto nxt = ++it;
+        if(nxt == node.end()) nxt = node.begin();
+        node.erase(--it);
+        it = nxt;
+    } 
+    cout << *it;
+    return 0;
+}
+```
+
+### 代码F-队列模拟
+```c++
+#include <iostream>
+#include <queue>
+using namespace std;
+queue<int> q;
+int main(){
+	int a[101], n, m;
+	cin >> n >> m;
+	for(int i = 0; i < n; i++){
+		q.push(1);
+	}
+	int k = 1;
+	while(!q.empty()){
+		k++;
+		if(k == m){
+			cout << q.front() << " ";
+			q.pop();
+			k = 0;
+		}else{
+			q.push(q.front());
+			q.pop();
+		}
+	}
+	return 0;
+}
+```
