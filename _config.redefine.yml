@@ -23,9 +23,9 @@ info:
 # Docs: https://redefine-docs.ohevan.com/basic/defaults
 defaults:
   # Favicon
-  favicon: /images/redefine-favicon.svg
+  favicon: /images/filled-end-portal-frame.webp
   # Site logo
-  logo: /images/golden-chest.webp
+  logo: /images/filled-end-portal-frame.webp
   # Site avatar
   avatar: /images/golden-chest.webp
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
