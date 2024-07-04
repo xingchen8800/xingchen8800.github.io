@@ -25,9 +25,9 @@ defaults:
   # Favicon
   favicon: /images/redefine-favicon.svg
   # Site logo
-  logo: 
+  logo: /images/golden-chest.webp
   # Site avatar
-  avatar: /images/redefine-avatar.svg
+  avatar: /images/golden-chest.webp
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
