@@ -4,7 +4,7 @@ date: 2024-05-24 19:41:30
 tags:
 categories:
 - 普及组
-- [搜索,深搜]
+- [算法,搜索,深搜]
 ---
 
 # T1. [烤鸡](https://www.luogu.com.cn/problem/P2089)
