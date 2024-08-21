@@ -3,7 +3,7 @@ title: DFS
 date: 2024-05-24 19:41:30
 tags:
 categories:
-- 普及组
+- [CSP,CSP-J,非课程]
 - [算法,搜索,深搜]
 ---
 
