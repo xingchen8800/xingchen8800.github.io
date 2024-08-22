@@ -18,16 +18,16 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="邻接矩阵                定义Definetion                  邻接矩阵在C++中一般以 二维数组 存储，直接用graph[N][N]存储有个点的图。其中，graph[i][j]表示从边的权值（连通性，其值为INF时表示与之间没有连边。           对于 无向图：  对于无权图，graph[i][j]表示点与点的连通性，1为连通，grap">
+        <meta name="description" content="邻接矩阵（视情况使用）                定义Definetion                  邻接矩阵在C++中一般以 二维数组 存储，直接用graph[N][N]存储有个点的图。其中，graph[i][j]表示从边的权值（连通性，其值为INF时表示与之间没有连边。           对于 无向图：  对于无权图，graph[i][j]表示点与点的连通性，1为">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图的存储">
 <meta property="og:url" content="http://xingchen8800.github.io/2024/08/21/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/index.html">
 <meta property="og:site_name" content="JHZ&#39;s blog">
-<meta property="og:description" content="邻接矩阵                定义Definetion                  邻接矩阵在C++中一般以 二维数组 存储，直接用graph[N][N]存储有个点的图。其中，graph[i][j]表示从边的权值（连通性，其值为INF时表示与之间没有连边。           对于 无向图：  对于无权图，graph[i][j]表示点与点的连通性，1为连通，grap">
+<meta property="og:description" content="邻接矩阵（视情况使用）                定义Definetion                  邻接矩阵在C++中一般以 二维数组 存储，直接用graph[N][N]存储有个点的图。其中，graph[i][j]表示从边的权值（连通性，其值为INF时表示与之间没有连边。           对于 无向图：  对于无权图，graph[i][j]表示点与点的连通性，1为">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xingchen8800.github.io/images/graph-1.png">
 <meta property="article:published_time" content="2024-08-21T01:05:20.000Z">
-<meta property="article:modified_time" content="2024-08-21T07:43:50.526Z">
+<meta property="article:modified_time" content="2024-08-21T15:51:25.965Z">
 <meta property="article:author" content="JHZ">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://xingchen8800.github.io/images/graph-1.png">
@@ -474,11 +474,11 @@ mjx-container[display="true"] + br {
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">48</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">52</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">23</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -532,8 +532,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-08-21 15:43:50</span>
-            <span class="mobile">2024-08-21 15:43:50</span>
+            <span class="desktop">2024-08-21 23:51:25</span>
+            <span class="mobile">2024-08-21 23:51:25</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -547,7 +547,14 @@ mjx-container[display="true"] + br {
                     
                         
                         <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/">《算法竞赛》</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        <li>
+                            | <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
                         </li>
                     
                     
@@ -589,6 +596,16 @@ mjx-container[display="true"] + br {
                     
                     
                 
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/%E7%AC%AC%E5%8D%81%E7%AB%A0/">第十章</a>&nbsp;
+                        </li>
+                    
+                    
+                
             </ul>
         </span>
     
@@ -613,7 +630,7 @@ mjx-container[display="true"] + br {
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="邻接矩阵">邻接矩阵</h1>
+            <h1 id="邻接矩阵视情况使用">邻接矩阵（视情况使用）</h1>
 
   <div class="note-large default">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
@@ -653,7 +670,7 @@ mjx-container[display="true"] + br {
     <i class="note-icon fa-solid fa-ban"></i><p>缺点：①对于稀疏图浪费空间；②不能两点间连多条边。</p>
 
   </div>
-<h1 id="邻接表">邻接表</h1>
+<h1 id="邻接表不建议使用">邻接表（不建议使用）</h1>
 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Edge_t</span> {</span><br><span class="line">    <span class="type">int</span> from, to, weight;   <span class="comment">//起始节点，终点节点，权值</span></span><br><span class="line">    <span class="built_in">Edge</span>(<span class="type">int</span> u, <span class="type">int</span> v, <span class="type">int</span> w) {</span><br><span class="line">        from = u;</span><br><span class="line">        to = v;</span><br><span class="line">        weight = w;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">vector&lt;Edge_t&gt; edges[N];    <span class="comment">//e[i]存储第i个节点链接的所有边</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Init</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) edges[i].<span class="built_in">clear</span>();</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">AddEdge</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> v, <span class="type">int</span> w)</span> </span>{</span><br><span class="line">    <span class="comment">//存当前边</span></span><br><span class="line">    edges[u].<span class="built_in">push_back</span>(<span class="built_in">Edge_t</span>(u, v, w));</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Find</span><span class="params">(<span class="type">int</span> u)</span> </span>{</span><br><span class="line">    <span class="comment">//遍历节点u的所有邻居</span></span><br><span class="line">    <span class="keyword">for</span>(edge : edges[u]) {</span><br><span class="line">        <span class="type">int</span> v = edge.to;</span><br><span class="line">        <span class="type">int</span> w = edge.w;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 
   <div class="note p-4 mb-4 rounded-small green icon-padding">
@@ -665,6 +682,11 @@ mjx-container[display="true"] + br {
     <i class="note-icon fa-solid fa-ban"></i><p>缺点：查找邻接点麻烦。</p>
 
   </div>
+<h1 id="链式前向星推荐使用">链式前向星（推荐使用）</h1>
+<p>链式前向星在 <strong>邻接表</strong>
+的基础之上增加了<code>head[]</code>数组，其中<code>head[u]</code>表示<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span>的一个邻边在<code>edges</code>数组中的下标。</p>
+<p>链式前向星还更改了<code>Edge_t</code>，在<code>Edge_t</code>中新增了成员变量<code>next</code>，<code>next</code>表示<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span>的下一个邻接点的位置。</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//N个点，M条边</span></span><br><span class="line"><span class="type">int</span> head[N], cnt = <span class="number">1</span>;   <span class="comment">//cnt表示当前edges数组的存储位置</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> {</span><br><span class="line">    <span class="type">int</span> from, to, next, weight;</span><br><span class="line">} Edge_t;</span><br><span class="line">Edge_t edges[M];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Init</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= N; i++) head[i] = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= M; i++) edges[i].next = <span class="number">-1</span>;</span><br><span class="line">    cnt = <span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">AddEdge</span><span class="params">(<span class="type">int</span> from, <span class="type">int</span> to, <span class="type">int</span> weight)</span> </span>{</span><br><span class="line">    edges[cnt] = (Edge_t) { from, to, head[from], weight };</span><br><span class="line">    head[from] = cnt++;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//遍历节点u的所有邻居</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = head[u]; ~i<span class="comment">/*i != -1*/</span>; i = edges[i].next) {</span><br><span class="line">    edge[i].to; <span class="comment">//就是邻居</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 
         </div>
 
@@ -679,7 +701,7 @@ mjx-container[display="true"] + br {
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-08-21 15:43:50
+                    :</strong> 2024-08-21 23:51:25
             </li>
         
         <li>
@@ -810,7 +832,7 @@ mjx-container[display="true"] + br {
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">图的存储</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5"><span class="nav-text">邻接矩阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%82%BB%E6%8E%A5%E8%A1%A8"><span class="nav-text">邻接表</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E8%A7%86%E6%83%85%E5%86%B5%E4%BD%BF%E7%94%A8"><span class="nav-text">邻接矩阵（视情况使用）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%82%BB%E6%8E%A5%E8%A1%A8%E4%B8%8D%E5%BB%BA%E8%AE%AE%E4%BD%BF%E7%94%A8"><span class="nav-text">邻接表（不建议使用）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8"><span class="nav-text">链式前向星（推荐使用）</span></a></li></ol>
 
     </div>
 </div>
@@ -843,7 +865,7 @@ mjx-container[display="true"] + br {
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共 23 篇文章
+                        共 25 篇文章
                     </span>
                     
                 </p>
