@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Hexo Theme Redefine">
     
-    <meta name="author" content="xingchen8800">
+    <meta name="author" content="Hertz Khin">
     <!-- preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@
     <!--- Icon Part-->
     <link rel="icon" type="image/png" href="/images/empty-end-portal-frame.png" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/empty-end-portal-frame.png">
-    <meta name="theme-color" content="#A31F34">
+    <meta name="theme-color" content="#4c8045">
     <link rel="shortcut icon" href="/images/empty-end-portal-frame.png">
     <!--- Page Info-->
     
@@ -38,7 +38,7 @@
         
             分类: 第二章 -
         
-        xingchen8800&#39;s blogs
+        Hertz Khin&#39;s blogs
     </title>
 
     
@@ -46,157 +46,6 @@
 
 
     <!--- Inject Part-->
-    
-
-    
-        <style>
-    :root {
-        --preloader-background-color: #fff;
-        --preloader-text-color: #000;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --preloader-background-color: #202124;
-            --preloader-text-color: #fff;
-        }
-    }
-
-    @media (prefers-color-scheme: light) {
-        :root {
-            --preloader-background-color: #fff;
-            --preloader-text-color: #000;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .ml13 {
-            font-size: 2.6rem !important; /* Adjust this value as needed */
-        }
-    }
-
-    .preloader {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        padding: 12px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh; /* 'h-screen' is 100% of the viewport height */
-        background-color: var(--preloader-background-color);
-        z-index: 1100; /* 'z-[1100]' sets the z-index */
-        transition: opacity 0.2s ease-in-out;
-    }
-
-    .ml13 {
-        font-size: 3.2rem;
-        /* text-transform: uppercase; */
-        color: var(--preloader-text-color);
-        letter-spacing: -1px;
-        font-weight: 500;
-        font-family: 'Chillax-Variable', sans-serif;
-        text-align: center;
-    }
-
-    .ml13 .word {
-        display: inline-flex;
-        flex-wrap: wrap;
-        white-space: nowrap;
-    }
-
-    .ml13 .letter {
-        display: inline-block;
-        line-height: 1em;
-    }
-</style>
-
-<div class="preloader">
-    
-<script src="/js/libs/anime.min.js"></script>
-
-    <h1 class="ml13">
-        xingchen8800&#39;s blogs
-    </h1>
-    <script>
-        var textWrapper = document.querySelector('.ml13');
-        // Split text into words
-        var words = textWrapper.textContent.trim().split(' ');
-
-        // Clear the existing content
-        textWrapper.innerHTML = '';
-
-        // Wrap each word and its letters in spans
-        words.forEach(function(word) {
-            var wordSpan = document.createElement('span');
-            wordSpan.classList.add('word');
-            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
-            textWrapper.appendChild(wordSpan);
-            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
-        });
-
-
-        anime.timeline({loop: true})
-            .add({
-                targets: '.ml13 .letter',
-                translateY: [100,0],
-                translateZ: 0,
-                opacity: [0,1],
-                easing: "easeOutExpo",
-                duration: 1400,
-                delay: (el, i) => 300 + 30 * i
-            }).add({
-            targets: '.ml13 .letter',
-            translateY: [0,-100],
-            opacity: [1,0],
-            easing: "easeInExpo",
-            duration: 1200,
-            delay: (el, i) => 100 + 30 * i
-        });
-
-        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
-
-        // If the theme status is not found in local storage, check the preferred color scheme
-        if (themeStatus === undefined || themeStatus === null) {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                themeStatus = 'dark';
-            } else {
-                themeStatus = 'light';
-            }
-        }
-
-        // Now you can use the themeStatus variable in your code
-        if (themeStatus) {
-            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
-            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
-        } else {
-            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
-            document.documentElement.style.setProperty('--preloader-text-color', '#000');
-        }
-
-        window.addEventListener('load', function () {
-            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
-        });
-
-        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
-        hidePreloaderAfterTimeout(5000);
-
-        function hidePreloaderAfterTimeout(delay) {
-            setTimeout(function () {
-                var preloader = document.querySelector('.preloader');
-                preloader.style.opacity = '0';
-                setTimeout(function () {
-                    preloader.style.display = 'none';
-                }, 200);
-            }, delay);
-        }
-    </script>
-</div>
     
 
     
@@ -210,21 +59,28 @@
     
 
     
-<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
 
     
-<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
 
     <!--- Font Part-->
     
     
+        <link href="/fonts/CascadiaCode-Bold.ttf" rel="stylesheet">
+    
     
     
 
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+    
 
     <script id="hexo-configurations">
-    window.config = {"hostname":"xingchen8800.github.io","root":"/","language":"zh-CN"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":[]},"code_block":{"copy":true,"style":"simple","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"xingchen8800's blogs","subtitle":{"text":["逸一时，误一世"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":3000,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/xingchen8800","instagram":null,"zhihu":null,"twitter":null,"email":"jhz3425@163.com","bilibili":"https://space.bilibili.com/602949487"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/5/19 11:45:14"};
+    window.config = {"hostname":"xingchen8800.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":true,"family":"Cascadia Code","url":"/fonts/CascadiaCode-Bold.ttf"}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#4c8045","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Hertz Khin's blogs","subtitle":{"text":["逸一时，误一世"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":3000,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"center","links":{"github":"https://github.com/xingchen8800","instagram":null,"zhihu":null,"twitter":null,"email":"xingchen.jhz@gmail.com","bilibili":"https://space.bilibili.com/602949487","fa-sharp-duotone fa-solid fa-link":"https://www.luogu.com.cn/user/602479"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Status":{"path":"https://status.ohevan.com/","icon":"fa-regular fa-chart-bar"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/5/19 11:45:14"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -374,6 +230,152 @@ mjx-container[display="true"] + br {
 </div>
 
 
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Hertz Khin&#39;s blogs
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [40,0],
+                translateZ: 0,
+                opacity: [0,1],
+                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i,
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0,-40],
+                opacity: [1,0],
+                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i,
+                complete: function() {
+                    hidePreloader(); // Call hidePreloader after the animation completes
+                }
+            });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
 <main class="page-container" id="swup">
 
     
@@ -393,7 +395,7 @@ mjx-container[display="true"] + br {
             
             <a class="logo-title" href="/">
                 
-                xingchen8800&#39;s blogs
+                Hertz Khin&#39;s blogs
                 
             </a>
         </div>
@@ -420,11 +422,52 @@ mjx-container[display="true"] + br {
                                 
                             </li>
                     
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://status.ohevan.com/"
+                                        >
+                                    <i class="fa-regular fa-chart-bar fa-fw"></i>
+                                    状态
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
                     
                 </ul>
             </div>
             <!-- Mobile -->
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 
                 <div class="icon-item navbar-bar">
                     <div class="navbar-bar-middle"></div>
@@ -457,6 +500,46 @@ mjx-container[display="true"] + br {
                         
                     </li>
             
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://status.ohevan.com/"
+                        >
+                            <span>
+                                状态
+                            </span>
+                            
+                                <i class="fa-regular fa-chart-bar fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
 
             
             
@@ -464,15 +547,15 @@ mjx-container[display="true"] + br {
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">52</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">30</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -498,7 +581,6 @@ mjx-container[display="true"] + br {
     </div>
     <div class="category-post-list">
         
-
 <div class="archive-list-container">
     
         <section class="archive-item mb-spacing-unit last:mb-0">
@@ -506,28 +588,32 @@ mjx-container[display="true"] + br {
                 <span class="archive-year font-semibold text-3xl mr-2">2024</span>
                 <span class="archive-year-post-count text-xs md:text-sm font-bold rounded-small bg-third-background-color py-[2px] px-[10px] border border-border-color">2</span>
             </div>
+            
             <ul class="article-list pl-0 md:pl-8 text-lg leading-[1.5]">
-              
                 
                     
-                    <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-04'>
+                    
+                         <!-- Close the previous LI if not the first item -->
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-04'>
+                    
+                    <a href="/2024/07/04/%E4%BA%8C%E5%88%86%E6%B3%95/" class="block overflow-hidden w-fit">
+                        <span class="article-title my-0.5 text-2xl">二分法</span>
+                    </a>
+                    
                 
                     
-                        <a href="/2024/07/04/%E4%BA%8C%E5%88%86%E6%B3%95/" class="block overflow-hidden w-fit">
-                            <span class="article-title mb-0.5 text-2xl">二分法</span>
-                        </a>
                     
-              
+                        
+                            </li>
+                         <!-- Close the previous LI if not the first item -->
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-02'>
+                    
+                    <a href="/2024/07/02/%E5%B0%BA%E5%8F%96%E6%B3%95%EF%BC%88%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%89/" class="block overflow-hidden w-fit">
+                        <span class="article-title my-0.5 text-2xl">尺取法（双指针）</span>
+                    </a>
+                    
                 
-                    
-                    <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='07-02'>
-                
-                    
-                        <a href="/2024/07/02/%E5%B0%BA%E5%8F%96%E6%B3%95%EF%BC%88%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%89/" class="block overflow-hidden w-fit">
-                            <span class="article-title mb-0.5 text-2xl">尺取法（双指针）</span>
-                        </a>
-                    
-              
+                </li> <!-- Ensure the last item is properly closed -->
             </ul>
         </section>
     
@@ -562,12 +648,12 @@ mjx-container[display="true"] + br {
               <span>2024</span>
               -
             
-            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">xingchen8800</a>
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Hertz Khin</a>
             
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共 25 篇文章
+                        共 30 篇文章
                     </span>
                     
                 </p>
@@ -592,7 +678,7 @@ mjx-container[display="true"] + br {
         
         <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
             <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
-            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.1</a></span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.4</a></span>
         </div>
         
         
@@ -673,6 +759,35 @@ mjx-container[display="true"] + br {
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 </main>
 
@@ -729,6 +844,10 @@ mjx-container[display="true"] + br {
 
 <script src="/js/layouts/categoryList.js" type="module"></script>
 
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
 
 
 

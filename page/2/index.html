@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Hexo Theme Redefine">
     
-    <meta name="author" content="xingchen8800">
+    <meta name="author" content="Hertz Khin">
     <!-- preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,13 +30,13 @@
     <!--- Icon Part-->
     <link rel="icon" type="image/png" href="/images/empty-end-portal-frame.png" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/empty-end-portal-frame.png">
-    <meta name="theme-color" content="#A31F34">
+    <meta name="theme-color" content="#4c8045">
     <link rel="shortcut icon" href="/images/empty-end-portal-frame.png">
     <!--- Page Info-->
     
     <title>
         
-        xingchen8800&#39;s blogs
+        Hertz Khin&#39;s blogs
     </title>
 
     
@@ -44,157 +44,6 @@
 
 
     <!--- Inject Part-->
-    
-
-    
-        <style>
-    :root {
-        --preloader-background-color: #fff;
-        --preloader-text-color: #000;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --preloader-background-color: #202124;
-            --preloader-text-color: #fff;
-        }
-    }
-
-    @media (prefers-color-scheme: light) {
-        :root {
-            --preloader-background-color: #fff;
-            --preloader-text-color: #000;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .ml13 {
-            font-size: 2.6rem !important; /* Adjust this value as needed */
-        }
-    }
-
-    .preloader {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        padding: 12px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh; /* 'h-screen' is 100% of the viewport height */
-        background-color: var(--preloader-background-color);
-        z-index: 1100; /* 'z-[1100]' sets the z-index */
-        transition: opacity 0.2s ease-in-out;
-    }
-
-    .ml13 {
-        font-size: 3.2rem;
-        /* text-transform: uppercase; */
-        color: var(--preloader-text-color);
-        letter-spacing: -1px;
-        font-weight: 500;
-        font-family: 'Chillax-Variable', sans-serif;
-        text-align: center;
-    }
-
-    .ml13 .word {
-        display: inline-flex;
-        flex-wrap: wrap;
-        white-space: nowrap;
-    }
-
-    .ml13 .letter {
-        display: inline-block;
-        line-height: 1em;
-    }
-</style>
-
-<div class="preloader">
-    
-<script src="/js/libs/anime.min.js"></script>
-
-    <h1 class="ml13">
-        xingchen8800&#39;s blogs
-    </h1>
-    <script>
-        var textWrapper = document.querySelector('.ml13');
-        // Split text into words
-        var words = textWrapper.textContent.trim().split(' ');
-
-        // Clear the existing content
-        textWrapper.innerHTML = '';
-
-        // Wrap each word and its letters in spans
-        words.forEach(function(word) {
-            var wordSpan = document.createElement('span');
-            wordSpan.classList.add('word');
-            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
-            textWrapper.appendChild(wordSpan);
-            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
-        });
-
-
-        anime.timeline({loop: true})
-            .add({
-                targets: '.ml13 .letter',
-                translateY: [100,0],
-                translateZ: 0,
-                opacity: [0,1],
-                easing: "easeOutExpo",
-                duration: 1400,
-                delay: (el, i) => 300 + 30 * i
-            }).add({
-            targets: '.ml13 .letter',
-            translateY: [0,-100],
-            opacity: [1,0],
-            easing: "easeInExpo",
-            duration: 1200,
-            delay: (el, i) => 100 + 30 * i
-        });
-
-        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
-
-        // If the theme status is not found in local storage, check the preferred color scheme
-        if (themeStatus === undefined || themeStatus === null) {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                themeStatus = 'dark';
-            } else {
-                themeStatus = 'light';
-            }
-        }
-
-        // Now you can use the themeStatus variable in your code
-        if (themeStatus) {
-            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
-            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
-        } else {
-            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
-            document.documentElement.style.setProperty('--preloader-text-color', '#000');
-        }
-
-        window.addEventListener('load', function () {
-            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
-        });
-
-        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
-        hidePreloaderAfterTimeout(5000);
-
-        function hidePreloaderAfterTimeout(delay) {
-            setTimeout(function () {
-                var preloader = document.querySelector('.preloader');
-                preloader.style.opacity = '0';
-                setTimeout(function () {
-                    preloader.style.display = 'none';
-                }, 200);
-            }, delay);
-        }
-    </script>
-</div>
     
 
     
@@ -208,21 +57,28 @@
     
 
     
-<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
 
     
-<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
 
     <!--- Font Part-->
     
     
+        <link href="/fonts/CascadiaCode-Bold.ttf" rel="stylesheet">
+    
     
     
 
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+    
 
     <script id="hexo-configurations">
-    window.config = {"hostname":"xingchen8800.github.io","root":"/","language":"zh-CN"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":[]},"code_block":{"copy":true,"style":"simple","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"xingchen8800's blogs","subtitle":{"text":["逸一时，误一世"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":3000,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/xingchen8800","instagram":null,"zhihu":null,"twitter":null,"email":"jhz3425@163.com","bilibili":"https://space.bilibili.com/602949487"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/5/19 11:45:14"};
+    window.config = {"hostname":"xingchen8800.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":true,"family":"Cascadia Code","url":"/fonts/CascadiaCode-Bold.ttf"}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#4c8045","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Hertz Khin's blogs","subtitle":{"text":["逸一时，误一世"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":3000,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"center","links":{"github":"https://github.com/xingchen8800","instagram":null,"zhihu":null,"twitter":null,"email":"xingchen.jhz@gmail.com","bilibili":"https://space.bilibili.com/602949487","fa-sharp-duotone fa-solid fa-link":"https://www.luogu.com.cn/user/602479"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Status":{"path":"https://status.ohevan.com/","icon":"fa-regular fa-chart-bar"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/5/19 11:45:14"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -372,6 +228,152 @@ mjx-container[display="true"] + br {
 </div>
 
 
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Hertz Khin&#39;s blogs
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [40,0],
+                translateZ: 0,
+                opacity: [0,1],
+                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i,
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0,-40],
+                opacity: [1,0],
+                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i,
+                complete: function() {
+                    hidePreloader(); // Call hidePreloader after the animation completes
+                }
+            });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
 <main class="page-container" id="swup">
 
     
@@ -426,7 +428,7 @@ mjx-container[display="true"] + br {
             
             <a class="logo-title" href="/">
                 <h1>
-                xingchen8800&#39;s blogs
+                Hertz Khin&#39;s blogs
                 </h1>
             </a>
         </div>
@@ -453,11 +455,52 @@ mjx-container[display="true"] + br {
                                 
                             </li>
                     
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   target="_blank" rel="noopener" href="https://status.ohevan.com/"
+                                        >
+                                    <i class="fa-regular fa-chart-bar fa-fw"></i>
+                                    状态
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
                     
                 </ul>
             </div>
             <!-- Mobile -->
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 
                 <div class="icon-item navbar-bar">
                     <div class="navbar-bar-middle"></div>
@@ -490,6 +533,46 @@ mjx-container[display="true"] + br {
                         
                     </li>
             
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           target="_blank" rel="noopener" href="https://status.ohevan.com/"
+                        >
+                            <span>
+                                状态
+                            </span>
+                            
+                                <i class="fa-regular fa-chart-bar fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
 
             
             
@@ -497,15 +580,15 @@ mjx-container[display="true"] + br {
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">52</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">30</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -531,22 +614,22 @@ mjx-container[display="true"] + br {
     <img src="/images/golden-chest.webp">
 </div>
                 <div class="author flex flex-col justify-center my-2.5 mx-0">
-    <div class="name">xingchen8800</div>
+    <div class="name">Hertz Khin</div>
     
         <div class="label">Lv3</div>
     
 </div>
                 <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">52</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">30</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -573,6 +656,619 @@ mjx-container[display="true"] + br {
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
+                        <a href="/2024/08/20/CSP-J%E5%88%9D%E8%B5%9B1/">
+                            CSP-J初赛第一天
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>模拟算法特训与实践</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Aug 20 2024 09:05:20 GMT+0800">
+                
+                    2024-08-20
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E7%AE%97%E6%B3%95/%E6%A8%A1%E6%8B%9F/">模拟</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/">CSP</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-J/">CSP-J</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-J/%E8%AF%BE%E7%A8%8B/">课程</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-J/%E8%AF%BE%E7%A8%8B/%E9%9B%86%E8%AE%AD/">集训</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C/">C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/08/20/CSP-J%E5%88%9D%E8%B5%9B1/">阅读全文<span class="seo-reader-text">CSP-J初赛第一天</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/08/18/CSP-J%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            CSP-J：动态规划
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            背包问题
+入门-0/1背包问题(CSP-J难度)
+问题描述
+
+  
+    给定  个物品和大小为  的背包。对于第  个物品，它占用的大小是 ，价值是 ，可以选择装入或者不装入背包。求背包中最多能装下价值多少的物品
+
+  
+简单分析
+设...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Aug 18 2024 20:31:30 GMT+0800">
+                
+                    2024-08-18
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/">《算法竞赛》</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        <li>
+                            | <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        <li>
+                            | <a href="/categories/CSP/">CSP</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-J/">CSP-J</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-J/%E8%AF%BE%E7%A8%8B/">课程</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-S/">CSP-S</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/%E7%AC%AC%E4%BA%94%E7%AB%A0/">第五章</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-S/%E9%9D%9E%E8%AF%BE%E7%A8%8B/">非课程</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">背包问题</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C/">C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/08/18/CSP-J%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">阅读全文<span class="seo-reader-text">CSP-J：动态规划</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/08/17/d10/">
+                            提高第十天（树状数组）
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>使用树状数组进行单值修改、区间查询。</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Aug 17 2024 15:49:33 GMT+0800">
+                
+                    2024-08-17
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        <li>
+                            | <a href="/categories/CSP/">CSP</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-S/">CSP-S</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-S/%E8%AF%BE%E7%A8%8B/">课程</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/">树</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/%E5%A4%9A%E5%8F%89%E6%A0%91/">多叉树</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/%E5%A4%9A%E5%8F%89%E6%A0%91/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C/">C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/08/17/d10/">阅读全文<span class="seo-reader-text">提高第十天（树状数组）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/08/14/d9/">
+                            提高第九天（并查集2）
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>并查集的抽象应用</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Aug 14 2024 12:38:08 GMT+0800">
+                
+                    2024-08-14
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        <li>
+                            | <a href="/categories/CSP/">CSP</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-S/">CSP-S</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-S/%E8%AF%BE%E7%A8%8B/">课程</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C/">C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/08/14/d9/">阅读全文<span class="seo-reader-text">提高第九天（并查集2）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/08/13/d8/">
+                            提高第八天（并查集1）
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>并查集是一种树形结构，动态维护若干个不重合的集合的查找与合并。</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Aug 13 2024 21:41:02 GMT+0800">
+                
+                    2024-08-13
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        <li>
+                            | <a href="/categories/CSP/">CSP</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-S/">CSP-S</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/CSP/CSP-S/%E8%AF%BE%E7%A8%8B/">课程</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C/">C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/08/13/d8/">阅读全文<span class="seo-reader-text">提高第八天（并查集1）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
                         <a href="/2024/08/12/d7/">
                             提高第七天（栈和表达式）
                         </a>
@@ -580,20 +1276,8 @@ mjx-container[display="true"] + br {
 
                     <div class="home-article-content markdown-body">
                         
-                            I.表达式
-理论部分
-中缀表达式
+                            <p>本篇主要探讨中缀、前缀、后缀表达式的相互转换以及运算，同时介绍单调栈的应用。</p>
 
-  
-    
-      知识链接🔗
-
-    
-    
-      中缀表达式就是我们平时使用的表达式，即数
-运算符 数，例：1 +
-1
-当有多个运算符时，可以按照运算优先级，将优先计算的子表...
                         
                     </div>
 
@@ -711,6 +1395,18 @@ mjx-container[display="true"] + br {
         </span>
         
         
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C/">C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
 
     <a href="/2024/08/12/d7/">阅读全文<span class="seo-reader-text">提高第七天（栈和表达式）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
@@ -735,23 +1431,8 @@ mjx-container[display="true"] + br {
 
                     <div class="home-article-content markdown-body">
                         
-                            差分数组
+                            <p>本篇包含：前缀和、差分数组、trie字典树的定义、实现和应用</p>
 
-  
-    
-      知识链接-差分数组
-
-    
-    
-      
-干什么
-
-差分数组是用来解决 区间修改，单值查询
-的一种算法。其中，区间修改，单值（对第个数）查询$O(n)。
-
-原理
-
-差分数组就是...
                         
                     </div>
 
@@ -886,6 +1567,18 @@ mjx-container[display="true"] + br {
         </span>
         
         
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C/">C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
 
     <a href="/2024/07/28/d6/">阅读全文<span class="seo-reader-text">提高第六天（前缀和、差分数组与trie字典树）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
@@ -910,18 +1603,8 @@ mjx-container[display="true"] + br {
 
                     <div class="home-article-content markdown-body">
                         
-                            Hash的介绍
+                            <p>使用128进制数（散列/Hash）表示字符串，推理逐位散列/Hash值与字符串的关系。</p>
 
-  
-    
-      知识链接-Hash
-
-    
-    
-      Hash（哈希/散列），是一种将每个字符串转化为与其对应的
-唯一Hash值 的一种算法。
-即：将不同的字符串用不同的数字表示
-我们可以把一个...
                         
                     </div>
 
@@ -1039,6 +1722,18 @@ mjx-container[display="true"] + br {
         </span>
         
         
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C/">C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
 
     <a href="/2024/07/27/d5/">阅读全文<span class="seo-reader-text">提高第五天（Hash算法）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
@@ -1063,9 +1758,8 @@ mjx-container[display="true"] + br {
 
                     <div class="home-article-content markdown-body">
                         
-                            1.空间搜索(习题)
-题目描述
-123      想带你去浪漫的地方旅行……某某创客空间研制了一款穿越体感器，穿上后可以穿越瞬移到别的空间。例如，你在第5层空间，第5层空间有数字2，即从第5层空间可以向上或者向下穿越2层，也意味你可以从第5层直达...
+                            <p>深搜的复习和迭代时深度优先搜索的应用</p>
+
                         
                     </div>
 
@@ -1142,6 +1836,18 @@ mjx-container[display="true"] + br {
             </ul>
         </span>
         
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C/">C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
         
     </div>
 
@@ -1249,552 +1955,21 @@ mjx-container[display="true"] + br {
         </span>
         
         
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C/">C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
 
     <a href="/2024/07/04/%E4%BA%8C%E5%88%86%E6%B3%95/">阅读全文<span class="seo-reader-text">二分法</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/07/02/%E5%B0%BA%E5%8F%96%E6%B3%95%EF%BC%88%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%89/">
-                            尺取法（双指针）
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            尺取法
-尺取法一般用来解决
-序列的区间问题。若区间是单调的，则可以使用二分法进一步优化。
-概念
-有下面一段代码: 12345for(int i = 1; i &lt;= n; i++) {    for(int j = n; i &gt;= ...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jul 02 2024 23:09:59 GMT+0800">
-                
-                    2024-07-02
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/">《算法竞赛》</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/%E7%AC%AC%E4%BA%8C%E7%AB%A0/">第二章</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2/">搜索</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E7%AE%97%E6%B3%95/%E6%90%9C%E7%B4%A2/%E5%B0%BA%E5%8F%96%E6%B3%95/">尺取法</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/07/02/%E5%B0%BA%E5%8F%96%E6%B3%95%EF%BC%88%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%89/">阅读全文<span class="seo-reader-text">尺取法（双指针）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/07/01/%E5%A0%86/">
-                            堆
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            堆
-堆是一种 树形结构，树的根是
-堆顶，堆顶始终保持是整个堆中的
-最优值（最大、最小...）
-二叉堆的概念
-
-定义：二叉堆是一棵用数组实现的 完全二叉树堆。
-性质：
-
- 的节点的父节点为 
-若 ，则  没有孩子
-若 ，则  没有...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Jul 01 2024 22:12:52 GMT+0800">
-                
-                    2024-07-01
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/">《算法竞赛》</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/%E7%AC%AC%E4%B8%80%E7%AB%A0/">第一章</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/">树</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91/%E5%A0%86/">堆</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/07/01/%E5%A0%86/">阅读全文<span class="seo-reader-text">堆</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/06/09/%E4%BA%8C%E5%8F%89%E6%A0%91%E5%92%8C%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">
-                            二叉树和哈夫曼树
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            二叉树的概念
-性质
-
-第  层有 
-个节点
-若每层节点都是满的，称为 满二叉树， 层的满二叉树有  个节点
-若只有最后一层的节点有缺失，则为 完全二叉树
-从 根节点 到一个节点的路径长度叫
-节点的深度，从一个节点到
-其子节点的最大路...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Jun 09 2024 19:36:08 GMT+0800">
-                
-                    2024-06-09
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/">《算法竞赛》</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/%E7%AC%AC%E4%B8%80%E7%AB%A0/">第一章</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/">树</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">哈夫曼树</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/06/09/%E4%BA%8C%E5%8F%89%E6%A0%91%E5%92%8C%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/">阅读全文<span class="seo-reader-text">二叉树和哈夫曼树</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/06/01/%E6%A0%88/">
-                            栈
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            栈（STL: stack&lt;T&gt;）
-T1. Text Reverse(hdu 1062)
-题目描述
-反转字符串
-样例
-样例输入 #1
-1olleh !dlrow
-样例输出 #1
-1hello world!
-题解
-用get...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Jun 01 2024 15:49:48 GMT+0800">
-                
-                    2024-06-01
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/">《算法竞赛》</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/%E7%AC%AC%E4%B8%80%E7%AB%A0/">第一章</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%80%A7%E8%A1%A8/">线性表</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%80%A7%E8%A1%A8/%E6%A0%88/">栈</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%80%A7%E8%A1%A8/%E6%A0%88/%E6%AD%A3%E5%B8%B8%E6%A0%88/">正常栈</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        <li>
-                            | <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%80%A7%E8%A1%A8/%E6%A0%88/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/06/01/%E6%A0%88/">阅读全文<span class="seo-reader-text">栈</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/05/31/%E9%98%9F%E5%88%97/">
-                            队列
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            STL：queue&lt;T&gt;
-T1. [NOIP2010 提高组]
-机器翻译 
-题目背景
-NOIP2010 提高组 T1
-题目描述
-小晨的电脑上安装了一个机器翻译软件，他经常用这个软件来翻译英语文章。
-这个翻译软件的原理很简单，...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri May 31 2024 00:15:41 GMT+0800">
-                
-                    2024-05-31
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/">《算法竞赛》</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%8B/%E7%AC%AC%E4%B8%80%E7%AB%A0/">第一章</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>&nbsp;
-                        </li>
-                    
-                    
-                
-                    
-                        
-                            <li>></li>
-                        
-                        <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%98%9F%E5%88%97/">队列</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/05/31/%E9%98%9F%E5%88%97/">阅读全文<span class="seo-reader-text">队列</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1829,12 +2004,12 @@ NOIP2010 提高组 T1
               <span>2024</span>
               -
             
-            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">xingchen8800</a>
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Hertz Khin</a>
             
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共 25 篇文章
+                        共 30 篇文章
                     </span>
                     
                 </p>
@@ -1859,7 +2034,7 @@ NOIP2010 提高组 T1
         
         <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
             <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
-            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.1</a></span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.4</a></span>
         </div>
         
         
@@ -1940,6 +2115,35 @@ NOIP2010 提高组 T1
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 </main>
 
@@ -1997,6 +2201,10 @@ NOIP2010 提高组 T1
 
 <script src="/js/layouts/categoryList.js" type="module"></script>
 
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
 
 
 
