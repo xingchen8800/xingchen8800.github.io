@@ -4,6 +4,8 @@ date: 2024-08-20 09:05:20
 categories:
     - [CSP,CSP-J,课程,集训]
     - [算法,模拟]
+excerpt: 模拟算法特训与实践
+tags: C++
 ---
 
 # 模拟算法

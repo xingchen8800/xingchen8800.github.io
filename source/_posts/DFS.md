@@ -1,10 +1,10 @@
 ---
 title: DFS
 date: 2024-05-24 19:41:30
-tags:
+tags: C++
 categories:
-- [CSP,CSP-J,非课程]
-- [数据结构,图,深度优先搜索]
+    - [CSP,CSP-J,非课程]
+    - [数据结构,图,深度优先搜索]
 ---
 
 # T1. [烤鸡](https://www.luogu.com.cn/problem/P2089)
