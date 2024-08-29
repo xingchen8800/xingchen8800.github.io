@@ -26,7 +26,7 @@
 <meta property="og:description" content="深搜与回溯的应用~">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-21T05:13:25.000Z">
-<meta property="article:modified_time" content="2024-08-24T05:27:46.303Z">
+<meta property="article:modified_time" content="2024-08-29T13:55:29.740Z">
 <meta property="article:author" content="JHZ">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -556,11 +556,11 @@ mjx-container[display="true"] + br {
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">47</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">30</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">32</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -600,7 +600,7 @@ mjx-container[display="true"] + br {
                     <div class="author flex items-center">
                         <span class="name text-default-text-color text-lg font-semibold">Hertz Khin</span>
                         
-                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv4</span>
                         
                     </div>
                     <div class="meta-info">
@@ -614,8 +614,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-08-24 13:27:46</span>
-            <span class="mobile">2024-08-24 13:27:46</span>
+            <span class="desktop">2024-08-29 21:55:29</span>
+            <span class="mobile">2024-08-29 21:55:29</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -676,7 +676,7 @@ mjx-container[display="true"] + br {
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%BE/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">深度优先搜索</a>&nbsp;
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%BE/%E6%90%9C%E7%B4%A2/">搜索</a>&nbsp;
                         </li>
                     
                     
@@ -716,7 +716,13 @@ mjx-container[display="true"] + br {
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="知识点-回溯算法">知识点-回溯算法</h1>
+            
+  <div class="note p-4 mb-4 rounded-small green icon-padding">
+    <i class="note-icon fa-solid fa-link"></i><p>代码请移步
+<a class="button " target="_blank" rel="noopener" href="https://github.com/xingchen8800/CSP/tree/main/S/3-DFS" title="这里">这里</a></p>
+
+  </div>
+<h1 id="知识点-回溯算法">知识点-回溯算法</h1>
 <h2 id="原因">原因</h2>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.无论么型的题目，只要能够建立对应的数学模型，我们就可以使用对应的算法模板去求解。</span><br><span class="line">动态规划-01背包问题</span><br><span class="line">2.并不是所有的问题都有数学模型，即便有了模型，但是也没有现成的算法可以使用，在此情况下往往需要校举：所有的情况，从中查找问题的解。</span><br><span class="line">枚举：暴力枚举法</span><br></pre></td></tr></table></figure></div>
 <h2 id="介绍">介绍</h2>
@@ -812,7 +818,7 @@ i)中有没有和i相等的数，如果有，不交换，否则交换（使第i�
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-08-24 13:27:46
+                    :</strong> 2024-08-29 21:55:29
             </li>
         
         <li>
@@ -984,7 +990,7 @@ i)中有没有和i相等的数，如果有，不交换，否则交换（使第i�
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共 30 篇文章
+                        共 32 篇文章
                     </span>
                     
                 </p>
