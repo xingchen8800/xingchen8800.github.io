@@ -1,7 +1,9 @@
 ---
 title: CSP-S测试-1
 date: 2024-08-31 21:05:04
-tags:
+tags: C++
+categories: 
+    - [CSP,S,课程]
 ---
 
 {% note green fa-link %}
@@ -12,9 +14,11 @@ tags:
 
 ## 文件说明
 
+
 | 输入 | 输出 | 代码 |
 |-|-|-|
 | `math.in` | `math.out` | `math.cpp` |
+
 ## 题目描述
 给定一个自然数 $n$ ，求解 $3^n$ 的个位是多少。具体理解可看样例。
 
@@ -123,6 +127,7 @@ int main() {
 # [异或路径（注：链接的数据范围更大）](https://www.luogu.com.cn/problem/AT_abc271_f)
 
 ## 文件说明
+
 
 | 输入 | 输出 | 代码 |
 |-|-|-|
@@ -361,11 +366,10 @@ int main() {
 
 ## 文件说明
 
+
 | 输入 | 输出 | 代码 |
 |-|-|-|
 | `substr.in` | `substr.out` | `substr.cpp` |
-
-# 【MX-J3-T2】Substring
 
 ## 题目描述
 
