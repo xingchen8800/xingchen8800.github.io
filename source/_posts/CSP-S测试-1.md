@@ -1,5 +1,5 @@
 ---
-title: CSP-S测试-1
+title: CSP-S日常测试
 date: 2024-08-31 21:05:04
 tags: C++
 categories: 
@@ -346,6 +346,8 @@ void dfs2(int x, int y, int cur) {
 }
 
 int main() {
+    freopen("xor.in", "r", stdin);
+    freopen("xor.out", "w", stdout);
     cin >> n;
     for(int i = 1; i <= n; i++) 
         for(int j = 1; j <= n; j++) cin >> a[i][j];
@@ -353,6 +355,8 @@ int main() {
     dfs1(1,1, 0);
     dfs2(n,n, 0);
     cout << ans << endl;
+    fclose(stdout);
+    fclose(stdin);
     return 0;
 }
 ```
@@ -517,6 +521,93 @@ int main() {
 
 ## 答案
 {% folding 答案 %}
+
+先考虑暴力做法：将每个可能的子串求出（$\mathbf{O}(n^2)$），并且排序（$\mathbf{O}(nlog_2n)$），输出复杂度为$\mathbf{O}(1)$
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+const int N = 500001;
+int a[N], n;
+
+struct Node {
+    string s;
+    int l, r;
+} substrs[N * 10];
+
+int cnt = 0;
+
+bool cmp(Node &a, Node &b) {
+    return a.s < b.s;
+}
+
+int main() {
+    freopen("substr.in", "r", stdin);
+    freopen("substr.out", "w", stdout);
+    int q, x;
+    cin >> n >> q;
+    for(int i = 1; i <= n; i++) cin >> a[i];
+
+    for(int i = 1; i <= n; i++) {
+        for(int j = i; j <= n; j++) {
+            string s;
+            for(int k = i; k <= j; k++) {
+                s += a[k] + '0';
+            }
+            substrs[cnt++] = (Node){s, i, j};
+        }
+    }
+    sort(substrs, substrs + cnt , cmp);
+
+    while(q--) {
+        cin >> x;
+        cout << substrs[x - 1].l << " " << substrs[x - 1].r << endl;
+    }
+    fclose(stdout);
+    fclose(stdin);
+    return 0;
+}
+```
+
+***
+
+>搬运自@yummy的题解
+
+进一步思考，我们不求出所有子串，照样可以回答“第 $k$ 个子串是谁”的问题吗？
+
+假设 $a_l=x$，记 $p_x=l$，即“ $x$ 的位置是 $l$ ”，那么 $x$ 开头的子串就有 $n+1−p_x$ 个。
+
+在读入整个 $a$ 后，我们对于所有 $i=1,2,\dots,n$，知道了以 $i$ 开头的子串个数。进而作前缀和，对于所有 $i=1,2,\dots,n$，可知开头 $\leq i$ 的子串个数，记为 $c_i$ 。
+
+对于一个问题，我们查找最小的 $l$ 使得 $k \leq c_l$，这样 $c_{l−1} + 1 \leq k \leq c_l$ ，即 $k$ 在 第$c_{l-1}$ 小和第 $c_l$小之间。左端点的数值就是 $l$ 了，左端点下标是 $p_l$。然后计算 $k - c_{l-1}$ 得到区间长度，计算 $p_l + k − c_{l−1} −1$  就可以求出右端点。
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, q, x, p[300005]; //a[l] = x, p[x] = l
+long long k, c[300005]; //c[i] = 开头为1~i的子串数量
+
+int main(){
+    cin >> n >> q;
+
+	for(int i = 1;i <= n; i++){
+		cin >> x;
+		p[x] = i; //映射
+	}
+
+	for(int i = 1;i <= n; i++)
+		c[i] = c[i - 1] + n - p[i] + 1;  //前缀和
+
+	while(q--) {
+		cin >> k;   //第k大
+		int l = lower_bound(c, c + n + 1, k) - c;   //寻找第一个<=k的元素下表
+		cout << p[l] << " " << k - c[l - 1] + p[l] - 1 << endl;
+	}
+	return 0;
+}
+```
 
 {% endfolding %}
 
