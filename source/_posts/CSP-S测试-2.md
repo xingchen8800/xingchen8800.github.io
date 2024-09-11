@@ -85,7 +85,7 @@ int Dfs(int x, int y) {
 
 现在，问题转化成了求“向上”操作在“操作序列”中的组合数，即：$C^n_{n+m}$
 
-但是，题目要求求 $C^m_{n+m} \mod (10^9 + 7)$ 呀，直接算$C^m_{n+m}$显然爆`long long`。如果把 $C^m_{n+m}$ 展开成 $\frac{(n+m)!}{n!m!}$，由于是除法，无法变成$\frac{n! \mod (10^9 + 7)}{(n+m)! \mod (10^9 + 7) m! \mod (10^9 + 7)}$，还是爆`long long`，怎么办呢？
+但是，题目要求求 $C^m_{n+m} \mod (10^9 + 7)$ 呀，直接算 $C^m_{n+m}$ 显然爆`long long`。如果把 $C^m_{n+m}$ 展开成 $\frac{(n+m)!}{n!m!}$，由于是除法，还是爆`long long`，怎么办呢？
 
 下面引入 __逆元__：对于 $a$ 和 $p$（$a$ 和 $p$ 互素），若 $a \cdot b \mod p ≡ 1 (\mod p)$ ，则称 $b$ 为 $a \mod p$的逆元。
 
@@ -95,7 +95,7 @@ int Dfs(int x, int y) {
 
 接着因为 $a^{p - 1} = a^{p - 2} \cdot a$，所以有 $a^{p-2} \cdot a \mod p ≡ 1 (\mod p)$对比逆元的定义可得，$a^{p-2}$ 是 $a$ 的逆元。
 
-代入原问题，就是：$\frac{n!}{(n+m)!m!} \mod (10^9 + 7) = (n! \cdot ((n+m)!m! \mod (10^9 + 7))^{10^9+5}) \mod (10^9+7)$
+代入原问题，就是：$\frac{(n+m)!}{n!m!} = (m+1)! \cdot \cdots \cdot (n+m) \cdot {n!}^{10^9+5} \mod {10^9+7}$
 
 注意，要用到快速幂。
 
