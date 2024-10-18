@@ -1,10 +1,11 @@
 ---
-title: CSP-J日常测试(241004)
+title: CSP-J日常测试(241004mor)
 date: 2024-10-04 11:00:00
 tags: C++
 categories: 
     - [CSP,J,课程]
     - [考试,CSP,J]
+excerpt: 排名、进制棋盘、除以7、卡牌
 ---
 
 # 一、排名（rank）
