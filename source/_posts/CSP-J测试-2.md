@@ -6,6 +6,9 @@ categories:
     - [CSP,J,课程]
     - [考试,CSP,J]
 excerpt: 相遇、加减法、立方体、日期计算、最强花园
+tags: 
+    - C++
+    - CSP入门组
 ---
 
 {% note green fa-info %}

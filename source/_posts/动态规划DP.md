@@ -1,7 +1,10 @@
 ---
 title: 动态规划DP
 date: 2024-09-25 22:21:41
-tags: C++
+tags: 
+    - C++
+    - CSP入门组
+    - CSP提高组
 categories: 
 - [算法,动态规划]
 ---

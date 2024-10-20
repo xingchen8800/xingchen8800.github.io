@@ -1,10 +1,12 @@
 ---
 title: CSP-S日常测试(240831)
 date: 2024-08-31 21:05:04
-tags: C++
 categories: 
     - [CSP,S,课程]
     - [考试,CSP,S]
+tags: 
+    - C++
+    - CSP提高组
 ---
 
 {% note green fa-link %}

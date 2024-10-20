@@ -1,9 +1,11 @@
 ---
 title: CSP-S日常测试(240907)
 date: 2024-09-07 21:56:48
-tags: C++
 categories:
     - [考试,CSP,S]
+tags: 
+    - C++
+    - CSP提高组
 ---
 
 # [路边的水沟](https://www.luogu.com.cn/problem/P2265)

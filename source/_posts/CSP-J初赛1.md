@@ -5,7 +5,9 @@ categories:
     - [CSP,CSP-J,课程,集训]
     - [算法,模拟]
 excerpt: 模拟算法特训与实践
-tags: C++
+tags: 
+    - C++
+    - CSP入门组
 ---
 
 # 模拟算法

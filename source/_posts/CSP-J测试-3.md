@@ -2,7 +2,9 @@
 title: CSP-J日常测试(241005mor)
 date: 2024-10-05 11:00:00
 
-tags:
+tags: 
+    - C++
+    - CSP入门组
 ---
 
 # 一、胶水（glue）

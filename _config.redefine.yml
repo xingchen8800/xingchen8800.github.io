@@ -11,7 +11,7 @@
 # Docs: https://redefine-docs.ohevan.com/basic/info
 info:
   # Site title
-  title: Hertz Khin's blogs
+  title: Khin's blogs
   # Author name
   author: Hertz Khin
   # Site URL
@@ -23,11 +23,11 @@ info:
 # Docs: https://redefine-docs.ohevan.com/basic/defaults
 defaults:
   # Favicon
-  favicon: /images/empty-end-portal-frame.png
+  favicon: /images/website/empty-end-portal-frame.png
   # Site logo
-  logo: /images/empty-end-portal-frame.png
+  logo: /images/website/empty-end-portal-frame.png
   # Site avatar
-  avatar: /images/golden-chest.webp
+  avatar: /images/website/golden-chest.webp
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -227,19 +227,19 @@ home:
   sidebar:
     enable: true # Whether to enable sidebar
     position: left # Sidebar position. left, right
-    first_item: menu # First item in sidebar. menu, info
-    announcement: # Announcement text
+    first_item: info # First item in sidebar. menu, info
+    announcement: "公告：近期更新CSP-J/S复赛有关内容" # Announcement text
     show_on_mobile: true # Whether to show sidebar navigation on mobile sheet menu
     links:
-      # Archives: 
-      #   path: /archives 
-      #   icon: fa-regular fa-archive # can be empty
-      # Tags: 
-      #   path: /tags 
-      #   icon: fa-regular fa-tags # can be empty
-      # Categories: 
-      #   path: /categories 
-      #   icon: fa-regular fa-folder # can be empty
+      Archives: 
+        path: /archives 
+        icon: fa-regular fa-archive # can be empty
+      Tags: 
+        path: /tags 
+        icon: fa-regular fa-tags # can be empty
+      Categories: 
+        path: /categories 
+        icon: fa-regular fa-folder # can be empty
       # ...... # you can add more
   # Article date format
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.
@@ -281,12 +281,12 @@ articles:
   # Author label
   author_label: 
     enable: true # Whether to enable
-    auto: true # Whether to automatically add author label, e.g. Lv1, Lv2, Lv3...
+    auto: false # Whether to automatically add author label, e.g. Lv1, Lv2, Lv3...
     list: ["干嘛"]
   # Code block settings
   code_block:
     copy: true # Whether to enable code block copy button
-    style: mac # mac | simple
+    style: simple # mac | simple
     font: # Custom font
       enable: true # Whether to enable
       family: Cascadia Code # Font family

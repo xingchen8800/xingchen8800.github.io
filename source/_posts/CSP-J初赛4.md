@@ -6,7 +6,9 @@ categories:
     - [数据结构,线性表,栈]
     - [STL,字符串]
     - [STL,栈]
-tags: C++
+tags: 
+    - C++
+    - CSP入门组
 ---
 
 # STL数据结构

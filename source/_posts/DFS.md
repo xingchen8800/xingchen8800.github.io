@@ -1,7 +1,9 @@
 ---
 title: DFS
 date: 2024-05-24 19:41:30
-tags: C++
+tags: 
+    - C++
+    - CSP入门组
 categories:
     - [CSP,CSP-J,非课程]
     - [数据结构,图,深度优先搜索]
