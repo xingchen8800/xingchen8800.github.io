@@ -18,32 +18,33 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="队列               定义                  队列是一种 先进先出 的数据结构，也是一种特殊的 线性表，只能在队首进行删除操作，队尾进行进行插入操作。          术语队首进行删除的一端叫做队首。 队尾进行插入的一端叫做队尾。 入队队列插入元素叫做入队，新加入的则为新的队尾。 出队队列删除元素叫做出队，删除后的元素为新的队首。 元素个数队列内从队首到队尾（含）的元">
+        <meta name="description" content="队列                定义                  队列是一种 先进先出 的数据结构，也是一种特殊的 线性表，只能在队首进行删除操作，队尾进行进行插入操作。          术语 队首 进行删除的一端叫做队首。 队尾 进行插入的一端叫做队尾。 入队 队列插入元素叫做入队，新加入的则为新的队尾。 出队 队列删除元素叫做出队，删除后的元素为新的队首。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSP-J初赛5">
 <meta property="og:url" content="http://xingchen8800.github.io/2024/08/26/CSP-J%E5%88%9D%E8%B5%9B5/index.html">
 <meta property="og:site_name" content="JHZ&#39;s blog">
-<meta property="og:description" content="队列               定义                  队列是一种 先进先出 的数据结构，也是一种特殊的 线性表，只能在队首进行删除操作，队尾进行进行插入操作。          术语队首进行删除的一端叫做队首。 队尾进行插入的一端叫做队尾。 入队队列插入元素叫做入队，新加入的则为新的队尾。 出队队列删除元素叫做出队，删除后的元素为新的队首。 元素个数队列内从队首到队尾（含）的元">
+<meta property="og:description" content="队列                定义                  队列是一种 先进先出 的数据结构，也是一种特殊的 线性表，只能在队首进行删除操作，队尾进行进行插入操作。          术语 队首 进行删除的一端叫做队首。 队尾 进行插入的一端叫做队尾。 入队 队列插入元素叫做入队，新加入的则为新的队尾。 出队 队列删除元素叫做出队，删除后的元素为新的队首。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-26T01:07:51.000Z">
-<meta property="article:modified_time" content="2024-08-26T14:28:41.105Z">
+<meta property="article:modified_time" content="2024-10-20T01:22:02.357Z">
 <meta property="article:author" content="JHZ">
 <meta property="article:tag" content="C++">
+<meta property="article:tag" content="CSP入门组">
 <meta name="twitter:card" content="summary">
     
     
     <!--- Icon Part-->
-    <link rel="icon" type="image/png" href="/images/empty-end-portal-frame.png" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/empty-end-portal-frame.png">
+    <link rel="icon" type="image/png" href="/images/website/empty-end-portal-frame.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/website/empty-end-portal-frame.png">
     <meta name="theme-color" content="#4c8045">
-    <link rel="shortcut icon" href="/images/empty-end-portal-frame.png">
+    <link rel="shortcut icon" href="/images/website/empty-end-portal-frame.png">
     <!--- Page Info-->
     
     <title>
         
             CSP-J初赛5 -
         
-        Hertz Khin&#39;s blogs
+        Khin&#39;s blogs
     </title>
 
     
@@ -85,7 +86,7 @@
 
     <script id="hexo-configurations">
     window.config = {"hostname":"xingchen8800.github.io","root":"/","language":"zh-CN","path":"search.xml"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":["干嘛"]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":true,"family":"Cascadia Code","url":"/fonts/CascadiaCode-Bold.ttf"}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#4c8045","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Hertz Khin's blogs","subtitle":{"text":["逸一时，误一世"],"hitokoto":{"enable":true,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":3000,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"center","links":{"github":"https://github.com/xingchen8800","instagram":null,"zhihu":null,"twitter":null,"email":"xingchen.jhz@gmail.com","bilibili":"https://space.bilibili.com/602949487","fa-sharp-duotone fa-solid fa-link":"https://www.luogu.com.cn/user/602479"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/5/19 11:45:14"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["干嘛"]},"code_block":{"copy":true,"style":"simple","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":true,"family":"Cascadia Code","url":"/fonts/CascadiaCode-Bold.ttf"}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#4c8045","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Hertz Khin's blogs","subtitle":{"text":["逸一时，误一世"],"hitokoto":{"enable":true,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":3000,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"center","links":{"github":"https://github.com/xingchen8800","instagram":null,"zhihu":null,"twitter":null,"email":"xingchen.jhz@gmail.com","bilibili":"https://space.bilibili.com/602949487","fa-sharp-duotone fa-solid fa-link":"https://www.luogu.com.cn/user/602479"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"公告：近期更新CSP-J/S复赛有关内容","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/5/19 11:45:14"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -305,7 +306,7 @@ mjx-container[display="true"] + br {
 
 <div class="preloader">
     <h2 class="ml13">
-        Hertz Khin&#39;s blogs
+        Khin&#39;s blogs
     </h2>
     <script>
         var textWrapper = document.querySelector('.ml13');
@@ -395,12 +396,12 @@ mjx-container[display="true"] + br {
         <div class="left">
             
                 <a class="logo-image" href="/">
-                    <img src="/images/empty-end-portal-frame.png">
+                    <img src="/images/website/empty-end-portal-frame.png">
                 </a>
             
             <a class="logo-title" href="/">
                 
-                Hertz Khin&#39;s blogs
+                Khin&#39;s blogs
                 
             </a>
         </div>
@@ -511,11 +512,34 @@ mjx-container[display="true"] + br {
 
             
             
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/categories"
+                        >
+                            <span>Categories</span>
+                            <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
         </ul>
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -557,13 +581,13 @@ mjx-container[display="true"] + br {
         
             <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
                 <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
-                    <img src="/images/golden-chest.webp">
+                    <img src="/images/website/golden-chest.webp">
                 </div>
                 <div class="info flex flex-col justify-between">
                     <div class="author flex items-center">
                         <span class="name text-default-text-color text-lg font-semibold">Hertz Khin</span>
                         
-                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv4</span>
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">干嘛</span>
                         
                     </div>
                     <div class="meta-info">
@@ -577,8 +601,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-08-26 22:28:41</span>
-            <span class="mobile">2024-08-26 22:28:41</span>
+            <span class="desktop">2024-10-20 09:22:02</span>
+            <span class="mobile">2024-10-20 09:22:02</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -646,6 +670,10 @@ mjx-container[display="true"] + br {
                         <a href="/tags/C/">C++</a>&nbsp;
                     </li>
                 
+                    <li>
+                        | <a href="/tags/CSP%E5%85%A5%E9%97%A8%E7%BB%84/">CSP入门组</a>&nbsp;
+                    </li>
+                
             </ul>
         </span>
     
@@ -669,26 +697,39 @@ mjx-container[display="true"] + br {
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1>
+            <h1 id="队列">队列</h1>
+
   <div class="note-large default">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
       <i class="notel-icon fa-solid fa-pen"></i><p>定义</p>
 
     </div>
     <div class="notel-content">
-      <p>队列是一种 <strong>先进先出</strong> 的数据结构，也是一种特殊的 <strong>线性表</strong>，只能在队首进行删除操作，队尾进行进行插入操作。</p>
+      <p>队列是一种 <strong>先进先出</strong> 的数据结构，也是一种特殊的
+<strong>线性表</strong>，只能在队首进行删除操作，队尾进行进行插入操作。</p>
 
     </div>
   </div>
-<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><h3 id="队首"><a href="#队首" class="headerlink" title="队首"></a>队首</h3><p>进行删除的一端叫做队首。</p>
-<h3 id="队尾"><a href="#队尾" class="headerlink" title="队尾"></a>队尾</h3><p>进行插入的一端叫做队尾。</p>
-<h3 id="入队"><a href="#入队" class="headerlink" title="入队"></a>入队</h3><p>队列插入元素叫做入队，新加入的则为新的队尾。</p>
-<h3 id="出队"><a href="#出队" class="headerlink" title="出队"></a>出队</h3><p>队列删除元素叫做出队，删除后的元素为新的队首。</p>
-<h3 id="元素个数"><a href="#元素个数" class="headerlink" title="元素个数"></a>元素个数</h3><p>队列内从队首到队尾（含）的元素个数。</p>
-<h2 id="常用接口"><a href="#常用接口" class="headerlink" title="常用接口"></a>常用接口</h2><h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span>    <span class="comment">//#include &lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">queue&lt;TypeName&gt; Q; <span class="comment">//TypeName填如int、double、string或者自定义结构体之类的数据类型（包括指针）</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">q.<span class="built_in">push</span>(x);      <span class="comment">//x入队</span></span><br><span class="line">q.<span class="built_in">pop</span>();        <span class="comment">//队首出队</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="Getter"><a href="#Getter" class="headerlink" title="Getter"></a>Getter</h3><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">size_t</span> size = q.<span class="built_in">size</span>();     <span class="comment">//获取大小</span></span><br><span class="line">TypeName x = q.<span class="built_in">front</span>();     <span class="comment">//获取队首元素</span></span><br><span class="line">TypeName y = q.<span class="built_in">back</span>();      <span class="comment">//获取队尾元素</span></span><br><span class="line"><span class="type">bool</span> empty = q.<span class="built_in">empty</span>();     <span class="comment">//获取队列是否为空(bool empty = q.size() == 0)</span></span><br></pre></td></tr></table></figure></div>
-<h1 id="动态数组"><a href="#动态数组" class="headerlink" title="动态数组"></a>动态数组</h1>
+<h2 id="术语">术语</h2>
+<h3 id="队首">队首</h3>
+<p>进行删除的一端叫做队首。</p>
+<h3 id="队尾">队尾</h3>
+<p>进行插入的一端叫做队尾。</p>
+<h3 id="入队">入队</h3>
+<p>队列插入元素叫做入队，新加入的则为新的队尾。</p>
+<h3 id="出队">出队</h3>
+<p>队列删除元素叫做出队，删除后的元素为新的队首。</p>
+<h3 id="元素个数">元素个数</h3>
+<p>队列内从队首到队尾（含）的元素个数。</p>
+<h2 id="常用接口">常用接口</h2>
+<h3 id="声明">声明</h3>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span>    <span class="comment">//#include &lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">queue&lt;TypeName&gt; Q; <span class="comment">//TypeName填如int、double、string或者自定义结构体之类的数据类型（包括指针）</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="基本操作">基本操作</h3>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">q.<span class="built_in">push</span>(x);      <span class="comment">//x入队</span></span><br><span class="line">q.<span class="built_in">pop</span>();        <span class="comment">//队首出队</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="getter">Getter</h3>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">size_t</span> size = q.<span class="built_in">size</span>();     <span class="comment">//获取大小</span></span><br><span class="line">TypeName x = q.<span class="built_in">front</span>();     <span class="comment">//获取队首元素</span></span><br><span class="line">TypeName y = q.<span class="built_in">back</span>();      <span class="comment">//获取队尾元素</span></span><br><span class="line"><span class="type">bool</span> empty = q.<span class="built_in">empty</span>();     <span class="comment">//获取队列是否为空(bool empty = q.size() == 0)</span></span><br></pre></td></tr></table></figure></div>
+<h1 id="动态数组">动态数组</h1>
+
   <div class="note-large default">
     <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
       <i class="notel-icon fa-solid fa-pen"></i><p>介绍</p>
@@ -699,13 +740,25 @@ mjx-container[display="true"] + br {
 
     </div>
   </div>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span>   <span class="comment">//#include &lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="comment">//初始化空vector</span></span><br><span class="line">vector&lt;TypeName&gt; ArrayName;    </span><br><span class="line"><span class="comment">//vector&lt;int&gt; a;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化n个val组成的vector</span></span><br><span class="line"><span class="function">vector&lt;TypeName&gt; <span class="title">ArrayName</span><span class="params">(n, val)</span></span>;</span><br><span class="line"><span class="comment">//vector&lt;int&gt; b(10, 100);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化存储begin到end区间元素的vector</span></span><br><span class="line"><span class="function">vector&lt;TypeName&gt; <span class="title">ArrayName</span><span class="params">(begin, end)</span></span>;</span><br><span class="line"><span class="comment">// vector&lt;char&gt; c(str.begin(), str.end());</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//复制初始化</span></span><br><span class="line"><span class="function">vector&lt;TypeName&gt; <span class="title">ArrayName</span><span class="params">(AnotherVector)</span></span>;</span><br><span class="line"><span class="comment">// vector&lt;char&gt; d(c);s</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><h4 id="1-下标遍历"><a href="#1-下标遍历" class="headerlink" title="1.下标遍历"></a>1.下标遍历</h4><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">array</span><span class="params">(<span class="number">20</span>, <span class="number">3</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt;= array.<span class="built_in">size</span>(); i++) {</span><br><span class="line">    cout &lt;&lt; array[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h4 id="2-迭代器遍历"><a href="#2-迭代器遍历" class="headerlink" title="2.迭代器遍历"></a>2.迭代器遍历</h4><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">array</span><span class="params">(<span class="number">20</span>, <span class="number">3</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(vector&lt;<span class="type">int</span>&gt;::iterator i = array.<span class="built_in">begin</span>(); i != array.<span class="built_in">end</span>(); i++) {</span><br><span class="line">    cout &lt;&lt; (*i) &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h4 id="3-反向迭代器遍历"><a href="#3-反向迭代器遍历" class="headerlink" title="3.反向迭代器遍历"></a>3.反向迭代器遍历</h4><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">array</span><span class="params">(<span class="number">20</span>, <span class="number">3</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(vector&lt;<span class="type">int</span>&gt;::reverse_iterator i = array.<span class="built_in">rbegin</span>(); i != array.<span class="built_in">rend</span>(); i++) {</span><br><span class="line">    cout &lt;&lt; (*i) &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h4 id="4-for-型遍历"><a href="#4-for-型遍历" class="headerlink" title="4.for(:)型遍历"></a>4.for(:)型遍历</h4><p>对于定义了迭代器<code>begin()</code>和<code>end()</code>的数据类型都可以<code>for(...:...)</code><br><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">array</span><span class="params">(<span class="number">20</span>, <span class="number">3</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> i : array) {   <span class="comment">//i的类型是int&amp;</span></span><br><span class="line">    cout &lt;&lt; i &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h3 id="常用接口-1"><a href="#常用接口-1" class="headerlink" title="常用接口"></a>常用接口</h3><h4 id="Getter-1"><a href="#Getter-1" class="headerlink" title="Getter"></a>Getter</h4><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">v.<span class="built_in">begin</span>();      <span class="comment">//获取首元素的迭代器</span></span><br><span class="line">v.<span class="built_in">end</span>();        <span class="comment">//获取尾元素后一位的迭代器</span></span><br><span class="line">v.<span class="built_in">rbegin</span>();     <span class="comment">//获取尾元素后一位的反向迭代器</span></span><br><span class="line">v.<span class="built_in">rend</span>();       <span class="comment">//获取首元素的迭代器</span></span><br><span class="line">v.<span class="built_in">size</span>();       <span class="comment">//获取v的元素个数</span></span><br><span class="line">v.<span class="built_in">capacity</span>();   <span class="comment">//获取v的容量（不等于元素个数）</span></span><br><span class="line">v.<span class="built_in">at</span>(<span class="number">2</span>);        <span class="comment">//获取v[2]</span></span><br><span class="line">v.<span class="built_in">front</span>();      <span class="comment">//获取v[0]</span></span><br><span class="line">v.<span class="built_in">back</span>();       <span class="comment">//获取最后一个元素</span></span><br></pre></td></tr></table></figure></div>
-<h4 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h4><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">v.<span class="built_in">push_back</span>(x);                         <span class="comment">//尾插x</span></span><br><span class="line">v.<span class="built_in">pop_back</span>();                           <span class="comment">//删除尾元素</span></span><br><span class="line">v.<span class="built_in">resize</span>(n);                            <span class="comment">//更改v的大小为n</span></span><br><span class="line">v.<span class="built_in">resize</span>(n,m);                          <span class="comment">//更改v的大小为n并以m填充新元素	</span></span><br><span class="line">v.<span class="built_in">insert</span>(v.<span class="built_in">begin</span>() + <span class="number">2</span>,<span class="number">-1</span>);             <span class="comment">//将 -1 插入到v[2]的位置 原v[2]及后面的元素 全部后移一个位置</span></span><br><span class="line">v.<span class="built_in">insert</span>(v.<span class="built_in">begin</span>() + <span class="number">2</span>,<span class="number">3</span>,<span class="number">-2</span>);           <span class="comment">//v[2]位置 插入 3 个 -2</span></span><br><span class="line">v.<span class="built_in">erase</span>(v.<span class="built_in">end</span>() - <span class="number">1</span>);                   <span class="comment">//删除迭代器所指元素  删除最后一个元素</span></span><br><span class="line">v.<span class="built_in">erase</span>(v.<span class="built_in">begin</span>() + <span class="number">1</span>,v.<span class="built_in">end</span>() - <span class="number">1</span>);     <span class="comment">//删除指定范围内的所有元素</span></span><br><span class="line">v.<span class="built_in">clear</span>();                              <span class="comment">//清空动态数组 </span></span><br></pre></td></tr></table></figure></div>
+<h2 id="使用">使用</h2>
+<h3 id="初始化">初始化</h3>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span>   <span class="comment">//#include &lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="comment">//初始化空vector</span></span><br><span class="line">vector&lt;TypeName&gt; ArrayName;    </span><br><span class="line"><span class="comment">//vector&lt;int&gt; a;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化n个val组成的vector</span></span><br><span class="line"><span class="function">vector&lt;TypeName&gt; <span class="title">ArrayName</span><span class="params">(n, val)</span></span>;</span><br><span class="line"><span class="comment">//vector&lt;int&gt; b(10, 100);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化存储begin到end区间元素的vector</span></span><br><span class="line"><span class="function">vector&lt;TypeName&gt; <span class="title">ArrayName</span><span class="params">(begin, end)</span></span>;</span><br><span class="line"><span class="comment">// vector&lt;char&gt; c(str.begin(), str.end());</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//复制初始化</span></span><br><span class="line"><span class="function">vector&lt;TypeName&gt; <span class="title">ArrayName</span><span class="params">(AnotherVector)</span></span>;</span><br><span class="line"><span class="comment">// vector&lt;char&gt; d(c);s</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="遍历">遍历</h3>
+<h4 id="下标遍历">1.下标遍历</h4>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">array</span><span class="params">(<span class="number">20</span>, <span class="number">3</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt;= array.<span class="built_in">size</span>(); i++) {</span><br><span class="line">    cout &lt;&lt; array[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h4 id="迭代器遍历">2.迭代器遍历</h4>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">array</span><span class="params">(<span class="number">20</span>, <span class="number">3</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(vector&lt;<span class="type">int</span>&gt;::iterator i = array.<span class="built_in">begin</span>(); i != array.<span class="built_in">end</span>(); i++) {</span><br><span class="line">    cout &lt;&lt; (*i) &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h4 id="反向迭代器遍历">3.反向迭代器遍历</h4>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">array</span><span class="params">(<span class="number">20</span>, <span class="number">3</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(vector&lt;<span class="type">int</span>&gt;::reverse_iterator i = array.<span class="built_in">rbegin</span>(); i != array.<span class="built_in">rend</span>(); i++) {</span><br><span class="line">    cout &lt;&lt; (*i) &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h4 id="for型遍历">4.for(:)型遍历</h4>
+<p>对于定义了迭代器<code>begin()</code>和<code>end()</code>的数据类型都可以<code>for(...:...)</code>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">array</span><span class="params">(<span class="number">20</span>, <span class="number">3</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> i : array) {   <span class="comment">//i的类型是int&amp;</span></span><br><span class="line">    cout &lt;&lt; i &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<h3 id="常用接口-1">常用接口</h3>
+<h4 id="getter-1">Getter</h4>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">v.<span class="built_in">begin</span>();      <span class="comment">//获取首元素的迭代器</span></span><br><span class="line">v.<span class="built_in">end</span>();        <span class="comment">//获取尾元素后一位的迭代器</span></span><br><span class="line">v.<span class="built_in">rbegin</span>();     <span class="comment">//获取尾元素后一位的反向迭代器</span></span><br><span class="line">v.<span class="built_in">rend</span>();       <span class="comment">//获取首元素的迭代器</span></span><br><span class="line">v.<span class="built_in">size</span>();       <span class="comment">//获取v的元素个数</span></span><br><span class="line">v.<span class="built_in">capacity</span>();   <span class="comment">//获取v的容量（不等于元素个数）</span></span><br><span class="line">v.<span class="built_in">at</span>(<span class="number">2</span>);        <span class="comment">//获取v[2]</span></span><br><span class="line">v.<span class="built_in">front</span>();      <span class="comment">//获取v[0]</span></span><br><span class="line">v.<span class="built_in">back</span>();       <span class="comment">//获取最后一个元素</span></span><br></pre></td></tr></table></figure></div>
+<h4 id="操作">操作</h4>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">v.<span class="built_in">push_back</span>(x);                         <span class="comment">//尾插x</span></span><br><span class="line">v.<span class="built_in">pop_back</span>();                           <span class="comment">//删除尾元素</span></span><br><span class="line">v.<span class="built_in">resize</span>(n);                            <span class="comment">//更改v的大小为n</span></span><br><span class="line">v.<span class="built_in">resize</span>(n,m);                          <span class="comment">//更改v的大小为n并以m填充新元素	</span></span><br><span class="line">v.<span class="built_in">insert</span>(v.<span class="built_in">begin</span>() + <span class="number">2</span>,<span class="number">-1</span>);             <span class="comment">//将 -1 插入到v[2]的位置 原v[2]及后面的元素 全部后移一个位置</span></span><br><span class="line">v.<span class="built_in">insert</span>(v.<span class="built_in">begin</span>() + <span class="number">2</span>,<span class="number">3</span>,<span class="number">-2</span>);           <span class="comment">//v[2]位置 插入 3 个 -2</span></span><br><span class="line">v.<span class="built_in">erase</span>(v.<span class="built_in">end</span>() - <span class="number">1</span>);                   <span class="comment">//删除迭代器所指元素  删除最后一个元素</span></span><br><span class="line">v.<span class="built_in">erase</span>(v.<span class="built_in">begin</span>() + <span class="number">1</span>,v.<span class="built_in">end</span>() - <span class="number">1</span>);     <span class="comment">//删除指定范围内的所有元素</span></span><br><span class="line">v.<span class="built_in">clear</span>();                              <span class="comment">//清空动态数组 </span></span><br></pre></td></tr></table></figure></div>
+
         </div>
 
         
@@ -719,7 +772,7 @@ mjx-container[display="true"] + br {
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-08-26 22:28:41
+                    :</strong> 2024-10-20 09:22:02
             </li>
         
         <li>
@@ -746,6 +799,10 @@ mjx-container[display="true"] + br {
                 
                     <li class="tag-item mx-0.5">
                         <a href="/tags/C/">#C++</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/CSP%E5%85%A5%E9%97%A8%E7%BB%84/">#CSP入门组</a>&nbsp;
                     </li>
                 
             </ul>
@@ -858,7 +915,7 @@ mjx-container[display="true"] + br {
     <div class="post-toc">
         <div class="toc-title">目录</div>
         <div class="page-title">CSP-J初赛5</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%98%9F%E5%88%97"><span class="nav-text">队列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AF%E8%AF%AD"><span class="nav-text">术语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%9F%E9%A6%96"><span class="nav-text">队首</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%9F%E5%B0%BE"><span class="nav-text">队尾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A5%E9%98%9F"><span class="nav-text">入队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BA%E9%98%9F"><span class="nav-text">出队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0"><span class="nav-text">元素个数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3"><span class="nav-text">常用接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E"><span class="nav-text">声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Getter"><span class="nav-text">Getter</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84"><span class="nav-text">动态数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%8D%E5%8E%86"><span class="nav-text">遍历</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3-1"><span class="nav-text">常用接口</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%98%9F%E5%88%97"><span class="nav-text">队列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AF%E8%AF%AD"><span class="nav-text">术语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%9F%E9%A6%96"><span class="nav-text">队首</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%9F%E5%B0%BE"><span class="nav-text">队尾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A5%E9%98%9F"><span class="nav-text">入队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BA%E9%98%9F"><span class="nav-text">出队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0"><span class="nav-text">元素个数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3"><span class="nav-text">常用接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E"><span class="nav-text">声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getter"><span class="nav-text">Getter</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84"><span class="nav-text">动态数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%8D%E5%8E%86"><span class="nav-text">遍历</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3-1"><span class="nav-text">常用接口</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
