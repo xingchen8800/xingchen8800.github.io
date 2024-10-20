@@ -7,7 +7,7 @@
   --second-background-color: #fafafa;
   --third-background-color: #f7f7f7;
   --third-background-color-transparent: rgba(241,241,241,0.6);
-  --primary-color: #a31f34;
+  --primary-color: #4c8045;
   --first-text-color: #323739;
   --second-text-color: #343a3c;
   --third-text-color: #5c6669;
@@ -15,7 +15,7 @@
   --default-text-color: #373d3f;
   --invert-text-color: #bebec6;
   --border-color: rgba(0,0,0,0.08);
-  --selection-color: #be243c;
+  --selection-color: #589450;
   --shadow-color-1: rgba(0,0,0,0.08);
   --shadow-color-2: rgba(0,0,0,0.05);
   --shadow-hover-color: rgba(0,0,0,0.28);
@@ -55,7 +55,7 @@
     --second-background-color: #fafafa;
     --third-background-color: #f7f7f7;
     --third-background-color-transparent: rgba(241,241,241,0.6);
-    --primary-color: #a31f34;
+    --primary-color: #4c8045;
     --first-text-color: #323739;
     --second-text-color: #343a3c;
     --third-text-color: #5c6669;
@@ -63,7 +63,7 @@
     --default-text-color: #373d3f;
     --invert-text-color: #bebec6;
     --border-color: rgba(0,0,0,0.08);
-    --selection-color: #be243c;
+    --selection-color: #589450;
     --shadow-color-1: rgba(0,0,0,0.08);
     --shadow-color-2: rgba(0,0,0,0.05);
     --shadow-hover-color: rgba(0,0,0,0.28);
@@ -104,7 +104,7 @@
     --second-background-color: #242529;
     --third-background-color: #292b2f;
     --third-background-color-transparent: rgba(32,33,36,0.6);
-    --primary-color: #a31f34;
+    --primary-color: #4c8045;
     --first-text-color: #d2d2d7;
     --second-text-color: #cbcbd1;
     --third-text-color: #9595a2;
@@ -112,7 +112,7 @@
     --default-text-color: #bebec6;
     --invert-text-color: #373d3f;
     --border-color: rgba(255,255,255,0.08);
-    --selection-color: #be243c;
+    --selection-color: #589450;
     --shadow-color-1: rgba(255,255,255,0.08);
     --shadow-color-2: rgba(255,255,255,0.05);
     --shadow-hover-color: rgba(69,69,69,0.28);
@@ -152,7 +152,7 @@
   --second-background-color: #fafafa;
   --third-background-color: #f7f7f7;
   --third-background-color-transparent: rgba(241,241,241,0.6);
-  --primary-color: #a31f34;
+  --primary-color: #4c8045;
   --first-text-color: #323739;
   --second-text-color: #343a3c;
   --third-text-color: #5c6669;
@@ -160,7 +160,7 @@
   --default-text-color: #373d3f;
   --invert-text-color: #bebec6;
   --border-color: rgba(0,0,0,0.08);
-  --selection-color: #be243c;
+  --selection-color: #589450;
   --shadow-color-1: rgba(0,0,0,0.08);
   --shadow-color-2: rgba(0,0,0,0.05);
   --shadow-hover-color: rgba(0,0,0,0.28);
@@ -199,7 +199,7 @@
   --second-background-color: #242529;
   --third-background-color: #292b2f;
   --third-background-color-transparent: rgba(32,33,36,0.6);
-  --primary-color: #a31f34;
+  --primary-color: #4c8045;
   --first-text-color: #d2d2d7;
   --second-text-color: #cbcbd1;
   --third-text-color: #9595a2;
@@ -207,7 +207,7 @@
   --default-text-color: #bebec6;
   --invert-text-color: #373d3f;
   --border-color: rgba(255,255,255,0.08);
-  --selection-color: #be243c;
+  --selection-color: #589450;
   --shadow-color-1: rgba(255,255,255,0.08);
   --shadow-color-2: rgba(255,255,255,0.05);
   --shadow-hover-color: rgba(69,69,69,0.28);
@@ -238,57 +238,57 @@
   --mermaid-theme: '';
 }
 :root {
-  --code-foreground: #3b4143;
-  --code-background: #f2f2f2;
-  --highlight-background: #fafafa;
-  --highlight-foreground: #3b4143;
+  --inline-code-foreground: #24292e;
+  --inline-code-background: #f1f1f1;
+  --highlight-background: #fdfdfd;
+  --highlight-foreground: #24292e;
   --highlight-keyword: #d73a49;
-  --highlight-link: #d73a49;
-  --highlight-built-in: #6f42c1;
+  --highlight-link: #d73a49 /* Following the pattern, link should have the same color as keyword */;
+  --highlight-built-in: #e36209;
   --highlight-number: #005cc5;
   --highlight-string: #032f62;
-  --highlight-regexp: #e36209;
+  --highlight-regexp: #032f62;
   --highlight-subst: #24292e;
   --highlight-comment: #6a737d;
-  --highlight-doctag: #22863a;
-  --highlight-meta: $highlight-meta;
+  --highlight-doctag: #d73a49;
+  --highlight-meta: #005cc5 /* Mapped based on the pattern for constant */;
   --highlight-variable: #005cc5;
-  --highlight-attr: #22863a;
-  --highlight-section: $highlight-section;
-  --highlight-bullet: #6f42c1;
-  --highlight-addition: #abe338;
-  --highlight-deletion: #ffa07a;
+  --highlight-attr: #005cc5;
+  --highlight-section: #005cc5;
+  --highlight-bullet: #735c0f;
+  --highlight-addition: #22863a;
+  --highlight-deletion: #b31d28;
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --code-foreground: #3b4143;
-    --code-background: #f2f2f2;
-    --highlight-background: #fafafa;
-    --highlight-foreground: #3b4143;
+    --inline-code-foreground: #24292e;
+    --inline-code-background: #f1f1f1;
+    --highlight-background: #fdfdfd;
+    --highlight-foreground: #24292e;
     --highlight-keyword: #d73a49;
-    --highlight-link: #d73a49;
-    --highlight-built-in: #6f42c1;
+    --highlight-link: #d73a49 /* Following the pattern, link should have the same color as keyword */;
+    --highlight-built-in: #e36209;
     --highlight-number: #005cc5;
     --highlight-string: #032f62;
-    --highlight-regexp: #e36209;
+    --highlight-regexp: #032f62;
     --highlight-subst: #24292e;
     --highlight-comment: #6a737d;
-    --highlight-doctag: #22863a;
-    --highlight-meta: $highlight-meta;
+    --highlight-doctag: #d73a49;
+    --highlight-meta: #005cc5 /* Mapped based on the pattern for constant */;
     --highlight-variable: #005cc5;
-    --highlight-attr: #22863a;
-    --highlight-section: $highlight-section;
-    --highlight-bullet: #6f42c1;
-    --highlight-addition: #abe338;
-    --highlight-deletion: #ffa07a;
+    --highlight-attr: #005cc5;
+    --highlight-section: #005cc5;
+    --highlight-bullet: #735c0f;
+    --highlight-addition: #22863a;
+    --highlight-deletion: #b31d28;
   }
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --code-foreground: #bfbfc7;
-    --code-background: #35363b;
-    --highlight-background: #21252b;
-    --highlight-foreground: #bfbfc7;
+    --inline-code-foreground: #c9d1d9;
+    --inline-code-background: #313131;
+    --highlight-background: #1e1e1e;
+    --highlight-foreground: #dcdcdc;
     --highlight-keyword: #569cd6;
     --highlight-link: #569cd6;
     --highlight-built-in: #4ec9b0;
@@ -308,32 +308,32 @@
   }
 }
 .light-mode {
-  --code-foreground: #3b4143;
-  --code-background: #f2f2f2;
-  --highlight-background: #fafafa;
-  --highlight-foreground: #3b4143;
+  --inline-code-foreground: #24292e;
+  --inline-code-background: #f1f1f1;
+  --highlight-background: #fdfdfd;
+  --highlight-foreground: #24292e;
   --highlight-keyword: #d73a49;
-  --highlight-link: #d73a49;
-  --highlight-built-in: #6f42c1;
+  --highlight-link: #d73a49 /* Following the pattern, link should have the same color as keyword */;
+  --highlight-built-in: #e36209;
   --highlight-number: #005cc5;
   --highlight-string: #032f62;
-  --highlight-regexp: #e36209;
+  --highlight-regexp: #032f62;
   --highlight-subst: #24292e;
   --highlight-comment: #6a737d;
-  --highlight-doctag: #22863a;
-  --highlight-meta: $highlight-meta;
+  --highlight-doctag: #d73a49;
+  --highlight-meta: #005cc5 /* Mapped based on the pattern for constant */;
   --highlight-variable: #005cc5;
-  --highlight-attr: #22863a;
-  --highlight-section: $highlight-section;
-  --highlight-bullet: #6f42c1;
-  --highlight-addition: #abe338;
-  --highlight-deletion: #ffa07a;
+  --highlight-attr: #005cc5;
+  --highlight-section: #005cc5;
+  --highlight-bullet: #735c0f;
+  --highlight-addition: #22863a;
+  --highlight-deletion: #b31d28;
 }
 .dark-mode {
-  --code-foreground: #bfbfc7;
-  --code-background: #35363b;
-  --highlight-background: #21252b;
-  --highlight-foreground: #bfbfc7;
+  --inline-code-foreground: #c9d1d9;
+  --inline-code-background: #313131;
+  --highlight-background: #1e1e1e;
+  --highlight-foreground: #dcdcdc;
   --highlight-keyword: #569cd6;
   --highlight-link: #569cd6;
   --highlight-built-in: #4ec9b0;

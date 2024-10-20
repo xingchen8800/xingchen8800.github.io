@@ -1,26 +1,27 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <cstdio>
+#include <cstring>
 using namespace std;
 
-int card[51];
-bool isMine[51] = {false};
+int card[1001];
+bool isMine[1001] = {false};
 
 int main() {
     int caseCnt = 0, m, n;
-    freopen("in.in", "r", stdin);
     while(cin >> m >> n) {
         memset(isMine, false, sizeof isMine);
         if(m == 0 && n == 0) break;
         caseCnt++;
         for(int i = 1; i <= n; i++) {
-            cin >> card[i];
+            scanf("%d", &card[i]);
             isMine[card[i]] = true;
         }
         int winCnt = 0, biggerCard = 0;
         for(int i = n * m; i >= 1; i--) {
             if(isMine[i]) {
-                if(biggerCard == 0) winCnt++;   //±ğÈËÃ»ÓĞ±È¡°ÎÒ¡±µ±Ç°¿¨ÅÆ´óµÄ¿¨£¬¡°ÎÒ¡±Ó®
-                else biggerCard--;              //ÓÃ±ğÈËµÄ±È¡°ÎÒ¡±µ±Ç°¿¨ÅÆ´óµÄ¿¨´ò¡°ÎÒ¡±µÄ¿¨ 
-            } else biggerCard++;    //ÊÇ±ğÈËµÄ¿¨
+                if(biggerCard == 0) winCnt++;   //åˆ«äººæ²¡æœ‰æ¯”â€œæˆ‘â€å½“å‰å¡ç‰Œå¤§çš„å¡ï¼Œâ€œæˆ‘â€èµ¢
+                else biggerCard--;              //ç”¨åˆ«äººçš„æ¯”â€œæˆ‘â€å½“å‰å¡ç‰Œå¤§çš„å¡æ‰“â€œæˆ‘â€çš„å¡ 
+            } else biggerCard++;    //æ˜¯åˆ«äººçš„å¡
         }
         printf("Case %d: %d\n", caseCnt, winCnt);
     }
