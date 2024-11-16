@@ -999,6 +999,16 @@ mjx-container[display="true"] + br {
                         
                             
                             
+  
+    
+      注意事项
+
+    
+    
+      double
+使用时的注意事项：尽量不要使用x==0来判断其是否为 。
+我们可以定义一个eps作为误差，一般为1e-7，写一个判断函数：
+12345const double eps = 1e-7;int dcmp(double x) {    if(x &gt; eps) return 1;    else r...
                         
                     </div>
 
