@@ -251,7 +251,7 @@ int dfs(int x, int y, int _xor) {
     int ans = 0;
     for(int i = 0; i < 2; i++) {
         int nx = x + dx[i], ny = y + dy[i];
-        if(nx >= 1 && nx <= n %% ny >= 1 && ny <= n) {  //不越界
+        if(nx >= 1 && nx <= n && ny >= 1 && ny <= n) {  //不越界
             if(!vis[nx][ny]) {  //未访问
                 vis[nx][ny] = true;
                 ans += dfs(dx, dy, _xor ^ a[dx][dy]);
@@ -281,7 +281,7 @@ int dfs(int x, int y, int _xor) {
     int ans = 0;
     for(int i = 0; i < 2; i++) {
         int nx = x + dx[i], ny = y + dy[i];
-        if(nx >= 1 && nx <= n %% ny >= 1 && ny <= n) {  //不越界
+        if(nx >= 1 && nx <= n && ny >= 1 && ny <= n) {  //不越界
             if(!vis[nx][ny]) {  //未访问
                 vis[nx][ny] = true;
                 ans += dfs(dx, dy, _xor ^ a[dx][dy]);

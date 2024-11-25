@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/xingchen/GithubPages/xingchen8800.github.io/source/cppcode/速通信息学奥赛一本通3",
-      "program": "c:/Users/xingchen/GithubPages/xingchen8800.github.io/source/cppcode/速通信息学奥赛一本通3/build/Debug/outDebug",
+      "cwd": "c:/Users/xingchen/GithubPages/xingchen8800.github.io/source/cppcode/省选/HFOI2024-T4",
+      "program": "c:/Users/xingchen/GithubPages/xingchen8800.github.io/source/cppcode/省选/HFOI2024-T4/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

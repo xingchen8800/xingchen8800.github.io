@@ -1,7 +1,6 @@
 ---
 title: CSP-J日常测试(241004aft)
-date: 2024-10-04 16:32:12
-tags: C++
+date: 2024-10-04 16:32:12\
 categories: 
     - [CSP,J,课程]
     - [考试,CSP,J]
