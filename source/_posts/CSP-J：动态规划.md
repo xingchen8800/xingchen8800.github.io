@@ -10,7 +10,6 @@ tags:
     - C++
     - CSP入门组
     - CSP提高组
-sticky: 114513
 excerpt: 背包问题、序列问题和字符串问题
 ---
 
