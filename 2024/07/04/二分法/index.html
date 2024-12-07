@@ -26,7 +26,7 @@
 <meta property="og:description" content="提示                  后面的部分 没有完成，要等到图以后才更新。 24&#x2F;10&#x2F;3 附加：万能二分模板          二分法就是不断地将一个序列一分为二，判断答案所在的区间（左或有），将答案所在的区间作为新的序列继续一分为二，直到达到（接近）答案为止。时间复杂度为          一般情况下 二分的对象是 题目提问的对象。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-04T13:31:13.000Z">
-<meta property="article:modified_time" content="2024-12-03T14:07:09.693Z">
+<meta property="article:modified_time" content="2024-12-07T10:37:07.422Z">
 <meta property="article:author" content="JHZ">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="CSP入门组">
@@ -548,7 +548,7 @@ mjx-container[display="true"] + br {
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">63</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">65</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -602,8 +602,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-12-03 22:07:09</span>
-            <span class="mobile">2024-12-03 22:07:09</span>
+            <span class="desktop">2024-12-07 18:37:07</span>
+            <span class="mobile">2024-12-07 18:37:07</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -798,6 +798,7 @@ mjx-container[display="true"] + br {
 </ol>
 <h3 id="代码">代码</h3>
 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">binary_search</span><span class="params">(<span class="type">int</span> *a, <span class="type">int</span> n, <span class="type">int</span> x)</span> </span>{</span><br><span class="line">    <span class="type">int</span> left = <span class="number">1</span>, right = n, middle;</span><br><span class="line">    <span class="keyword">while</span>(left &lt; right) {</span><br><span class="line">        middle = left + (right - left) &gt;&gt; <span class="number">1</span>;    <span class="comment">//取平均值</span></span><br><span class="line">        <span class="keyword">if</span>(a[middle] &gt;= x) { <span class="comment">//在左区间</span></span><br><span class="line">            right = middle - <span class="number">1</span>;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            left = middle + <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> left;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">binary_search</span><span class="params">(<span class="type">int</span> *a, <span class="type">int</span> n, <span class="type">int</span> x)</span> </span>{</span><br><span class="line">    <span class="type">int</span> left = <span class="number">1</span>, right = n + <span class="number">1</span>, middle;</span><br><span class="line">    <span class="keyword">while</span>(left &lt; right) {</span><br><span class="line">        middle = left + (right - left + <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;    <span class="comment">//取平均值</span></span><br><span class="line">        <span class="keyword">if</span>(a[middle] &gt;= x) {</span><br><span class="line">            right = middle;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            left = middle + <span class="number">1</span>; </span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> left;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 <h2 id="在单调递增序列中查找x或小于x且最接近x的数">在单调递增序列中查找x或小于x且最接近x的数</h2>
 
   <div class="note-large blue">
@@ -839,6 +840,7 @@ mjx-container[display="true"] + br {
 </ol>
 <h3 id="代码-1">代码</h3>
 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">binary_search1</span><span class="params">(<span class="type">int</span> *a, <span class="type">int</span> n, <span class="type">int</span> x)</span> </span>{</span><br><span class="line">    <span class="type">int</span> left = <span class="number">1</span>, right = n, middle;</span><br><span class="line">    <span class="keyword">while</span>(left &lt; right) {</span><br><span class="line">        middle = left + (right - left + <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;    <span class="comment">//取平均值</span></span><br><span class="line">        <span class="keyword">if</span>(a[middle] &gt;= x) { <span class="comment">//在左区间</span></span><br><span class="line">            right = middle - <span class="number">1</span>;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            left = middle;  <span class="comment">//右中位数不能+1</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> left;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">binary_search1</span><span class="params">(<span class="type">int</span> *a, <span class="type">int</span> n, <span class="type">int</span> x)</span> </span>{</span><br><span class="line">    <span class="type">int</span> left = <span class="number">1</span>, right = n + <span class="number">1</span>, middle;</span><br><span class="line">    <span class="keyword">while</span>(left &lt; right) {</span><br><span class="line">        middle = left + (right - left) &gt;&gt; <span class="number">1</span>;    <span class="comment">//取平均值</span></span><br><span class="line">        <span class="keyword">if</span>(a[middle] &gt; x) {</span><br><span class="line">            right = middle;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            left = middle + <span class="number">1</span>; </span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> left;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 <h2 id="整数二分的stl模板函数">整数二分的STL模板函数</h2>
 <p><code>lower_bound(int *b, int *e, int x)</code>和<code>upper_bound(int *b, int *e, int x)</code>两个STL函数的功能：</p>
 <table>
@@ -1202,7 +1204,7 @@ V，这样我和我的朋友都可以得到一块大小为 V 的馅饼。答案�
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-12-03 22:07:09
+                    :</strong> 2024-12-07 18:37:07
             </li>
         
         <li>
@@ -1383,7 +1385,7 @@ Pie(http:&#x2F;&#x2F;poj.org&#x2F;problem?id&#x3D;3122)</span></a><ol class="nav
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 63 篇文章
+                        共撰写了 65 篇文章
                     </span>
                     
                 </p>
