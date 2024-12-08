@@ -8,4 +8,6 @@ _multiconfig.yml
 *.code-workspace
 .vscode/
 .github/
-/deploy_git
+public/
+node_modules/
+_config.landscape.yml
