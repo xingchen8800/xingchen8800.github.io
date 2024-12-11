@@ -60,8 +60,7 @@ int Prim() {
 }
 
 int main() {
-    cin >> n >> m;
-    char tmp[55]; cin.getline(tmp, 55); //吞掉回车
+    cin >> n >> m; getchar(); //吞掉回车
     for(int i = 0; i < n; i++) {
         cin.getline(mp[i], 55);
     }
