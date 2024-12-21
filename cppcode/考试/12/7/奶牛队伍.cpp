@@ -4,12 +4,12 @@ using namespace std;
 typedef long long ll;
 const ll N = 50001;
 ll n, kind = 0;
-struct Cow {
+struct Line {
     ll id, x;
 } c[N];
 map<ll, ll> m, m1;
 
-bool Cmp(Cow &a, Cow &b) {
+bool Cmp(Line &a, Line &b) {
     return a.x < b.x;
 }
 
