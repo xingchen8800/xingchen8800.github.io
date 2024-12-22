@@ -384,7 +384,7 @@ int main() {
 
 
 1. 将数组以升序排序
-2. 固定一个数 $i$，用双指针在 $[i+1,n]$ 区间内作 [__反向扫描__](https://xingchen8800.github.io/2024/07/02/尺取法（双指针）/)。$j$ 右移条件：$a_i + a_j + a_k < T$，$k$ 左移条件：$a_i + a_j + a_k > T$。
+2. 固定一个数 $i$，用双指针在 $[i+1,n]$ 区间内作 [__反向扫描__](/2024/尺取法（双指针）/)。$j$ 右移条件：$a_i + a_j + a_k < T$，$k$ 左移条件：$a_i + a_j + a_k > T$。
 
 ```c++
 #include <bits/stdc++.h>
@@ -476,8 +476,8 @@ int main() {
 {% notel default fa-link 链接%}
 
 
-- 最短路径1（Floyed和Dijsktra）： [传送门](https://xingchen8800.github.io/2024/08/27/d13/)
-- 最短路径2（Bellman和SPFA）： [传送门](https://xingchen8800.github.io/2024/08/28/d14/)
+- 最短路径1（Floyed和Dijsktra）： [传送门](/2024/CSP-S/d13/)
+- 最短路径2（Bellman和SPFA）： [传送门](/2024/CSP-S/d14/)
 {% endnotel %}
 
 首选 __Dijsktra__ 和 __SPFA__。但是有 $s$ 个源点，该怎么办呢？很简单，运用 __网络流__ 学到的 __虚拟源点__，将 $s$ 个真源点连接到一个虚拟源点上。
